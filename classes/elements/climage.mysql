@@ -1,0 +1,8 @@
+CREATE TABLE climage (
+  id int(4) NOT NULL auto_increment,
+  image varchar(64) default NULL,
+  bigimage varchar(64) default NULL,
+  title varchar(128) default NULL,
+  PRIMARY KEY  (id),
+  KEY i_climage (id)
+) TYPE=MyISAM;

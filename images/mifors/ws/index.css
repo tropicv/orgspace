@@ -1,0 +1,16 @@
+a{font-family: Arial, Helvetica, sans-serif; FONT-SIZE: 14px; COLOR: #003399; TEXT-DECORATION: none;}
+
+.input {font-size:11px;color:#000000;font-family:Verdana,Arial,Helvetica,sans-serif; border:#ABC6E1 1px solid;background-color:#ffffff}
+.title {font-size:11px;color:#ffffff;font-family:Tahoma,Arial,Helvetica,sans-serif}
+.color {font-size:11px;color:#000000;font-family:Tahoma,Arial,Helvetica,sans-serif}
+
+.header {font-size:15px;color:#000000;font-family:Tahoma,Arial,Helvetica,sans-serif}
+.sm {font-size:11px;color:#000000;font-family:Tahoma,Arial,Helvetica,sans-serif}
+
+.spisok {font-size:11px;color:#000000;font-family:Tahoma,Arial,Helvetica,sans-serif;text-decoration:none}
+.spisok A:link {color:#000000;text-decoration:none}
+A.spisok:link {color:#000000;text-decoration:none}
+.spisok A:visited {color:#000000;text-decoration:none}
+A.spisok:visited {color:#000000;text-decoration:none}
+.spisok A:hover {color:#000000;text-decoration:none}
+A.spisok:hover {color:#000000;text-decoration:none}

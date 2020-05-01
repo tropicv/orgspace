@@ -1,0 +1,9 @@
+body, p{font-size:13px; color:#747474;}
+TABLE.MIFdlg td 	{ padding-left : 5px; font-size: 80%; color : #000000; text-align: left;}
+TABLE.MIFdlg td.title	{ padding-left : 5px; text-align: right;}
+
+table.MIFcont 			{}
+table.MIFcont 	td		{font-size: 80%;}
+table.MIFcont 	td  a		{text-decoration: none; color: #000000;}
+table.MIFcont 	td  a:hover	{text-decoration: underline; color: #000000;}
+.wtext p { color: #fff; }

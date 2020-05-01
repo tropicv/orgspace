@@ -1,0 +1,174 @@
+AuthType Basic
+AuthName "Orgspace TEST SITE"
+AuthUserFile /home/u183389/devel.orgspace.ru/www/passwd
+Require user adm
+
+#ErrorDocument 404 /404.htm
+#ErrorDocument 500 /500.htm
+
+<Files .htaccess>
+ order allow,deny
+ deny from all
+</Files>
+
+RewriteEngine on
+
+RewriteBase /
+Options +FollowSymlinks
+
+RewriteCond %{ENV:REDIRECT_STATUS} 500
+RewriteRule .* 404.htm [l]
+
+RewriteCond  %{REQUEST_URI}  ^/cap.php
+RewriteRule ^cap.php$ "cap.php" [l]
+
+RewriteCond  %{REQUEST_URI}  ^/robots.txt
+RewriteRule ^robots.txt$ "robots.txt" [l]
+
+RewriteCond  %{REQUEST_URI}  ^/sitemap.xml
+RewriteRule ^sitemap.xml$ "sitemap.xml" [l]
+
+RewriteCond  %{REQUEST_URI}  ^/yandex_7788203de432891a.txt
+RewriteRule ^yandex_7788203de432891a.txt$ "yandex_7788203de432891a.txt" [l]
+
+RewriteCond  %{REQUEST_URI}  ^/yandex_7cd94bdb4ca13e67.html
+RewriteRule ^yandex_7cd94bdb4ca13e67.html$ "yandex_7cd94bdb4ca13e67.html" [l]
+
+RewriteCond  %{REQUEST_URI}  ^/yandex_660a7fff4991da11.html
+RewriteRule ^yandex_660a7fff4991da11.html$ "yandex_660a7fff4991da11.html" [l]
+
+RewriteCond  %{REQUEST_URI}  ^/favicon.ico
+RewriteRule ^favicon.ico$ "favicon.ico" [l]
+
+RewriteCond  %{REQUEST_URI} ^/container-view
+RewriteCond  %{QUERY_STRING} ^obj=613
+RewriteRule ^container-view$ "chairs-example?walias=ergonomiq&obj=35" [l]
+RewriteCond  %{QUERY_STRING} ^obj=246
+RewriteRule ^container-view$ "/zone-solution?walias=discussion" [R=301,L]
+RewriteCond  %{QUERY_STRING} ^obj=500
+RewriteRule ^container-view$ "/zone-solution?walias=conference" [R=301,L] 
+RewriteCond  %{QUERY_STRING} ^obj=254
+RewriteRule ^container-view$ "/ordcat-add?" [R=301,L] 
+
+RewriteCond  %{REQUEST_URI} ^/chairs-all
+RewriteRule ^chairs-all$ "/container-view?walias=chairs" [R=301,L] 
+
+
+# NEW START
+
+RewriteCond %{REQUEST_URI} ^/news-view
+RewriteCond %{QUERY_STRING} ^obj=4	 
+RewriteRule ^news-view$ "/container-view?obj=345" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=63 
+RewriteRule ^news-view$ "/container-view?obj=880" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=96 
+RewriteRule ^news-view$ "/project-view?walias=ghk" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=83 
+RewriteRule ^news-view$ "/project-view?walias=normetimpeks" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=22 
+RewriteRule ^news-view$ "/container-view?obj=416" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=6	 
+RewriteRule ^news-view$ "/container-view?obj=344" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=79 
+RewriteRule ^news-view$ "/container-view?obj=795" [R=301,L] 
+
+RewriteCond %{REQUEST_URI} ^/zone-view
+RewriteCond %{QUERY_STRING} ^obj=7	 	 
+RewriteRule ^zone-view$ "/zone-solution?walias=callcenter" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=8	 	 
+RewriteRule ^zone-view$ "/zone-solution?walias=educational" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=17	 	 
+RewriteRule ^zone-view$ "/zone-solution?walias=dining-room" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^walias=discussion
+RewriteRule ^zone-view$ "/zone-solution?walias=discussion" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^walias=workplaces
+RewriteRule ^zone-view$ "/zone-solution?walias=workplaces" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^walias=dining-room
+RewriteRule ^zone-view$ "/zone-solution?walias=dining-room" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^walias=conference
+RewriteRule ^zone-view$ "/zone-solution?walias=conference" [R=301,L] 
+
+RewriteCond %{REQUEST_URI}  ^/zone-view
+RewriteCond %{QUERY_STRING} ^walias=callcenter
+RewriteRule ^zone-example$ "/zone-solution?walias=callcenter" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^walias=conference
+RewriteRule ^zone-example$ "/zone-solution?walias=conference" [R=301,L] 
+
+RewriteCond %{REQUEST_URI}  ^/container-view
+RewriteCond %{QUERY_STRING} ^obj=705
+RewriteRule ^container-view$ "/chairs-example?walias=bchairs&obj=49" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=855
+RewriteRule ^container-view$ "/chairs-view?walias=training" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=250
+RewriteRule ^container-view$ "/zone-solution?walias=archive" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=854
+RewriteRule ^container-view$ "/project-view?walias=nornikel" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=631
+RewriteRule ^container-view$ "/container-view?obj=55" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=122
+RewriteRule ^container-view$ "/goods-view?obj=16" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=184
+RewriteRule ^container-view$ "/goods-view?obj=19" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=556
+RewriteRule ^container-view$ "/container-view?obj=557" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=664
+RewriteRule ^container-view$ "/container-view?obj=578" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=702
+RewriteRule ^container-view$ "/container-view?obj=578" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=667
+RewriteRule ^container-view$ "/container-view?obj=578" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=579
+RewriteRule ^container-view$ "/container-view?obj=578" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=834
+RewriteRule ^container-view$ "/project-view?walias=raiffeisenbank" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=580
+RewriteRule ^container-view$ "/chairs-example?walias=wchairs&obj=67" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=687
+RewriteRule ^container-view$ "/chairs-example?walias=wchairs&obj=68" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=254
+RewriteRule ^container-view$ "/ordcat-add" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=625
+RewriteRule ^container-view$ "/chairs-example?walias=conference&obj=70" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=341
+RewriteRule ^container-view$ "/" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=435
+RewriteRule ^container-view$ "/chairs-example?walias=vchairs&obj=9" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^obj=906
+RewriteRule ^container-view$ "/news-abc?obj=1" [R=301,L]
+
+RewriteCond %{REQUEST_URI}  ^/container-pview
+RewriteCond %{QUERY_STRING} ^obj=649
+RewriteRule ^container-pview$ "/chairs-view?walias=bchairs" [R=301,L] 
+
+RewriteCond %{REQUEST_URI}  ^/chairs-example
+RewriteCond %{QUERY_STRING} ^walias=ergonomiq&obj=34
+RewriteRule ^chairs-example$ "/container-view?obj=578" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^walias=ergonomiq&obj=25
+RewriteRule ^chairs-example$ "/container-view?obj=578" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^walias=ergonomiq&obj=33
+RewriteRule ^chairs-example$ "/container-view?obj=578" [R=301,L] 
+RewriteCond %{QUERY_STRING} ^walias=wchairs&obj=100
+RewriteRule ^chairs-example$ "/chairs-view?walias=wchairs" [R=301,L]
+
+RewriteCond %{REQUEST_URI}  ^/chairs-all
+RewriteRule ^chairs-all$ "/container-view?obj=578" [R=301,L] 
+
+RewriteCond %{REQUEST_URI}  ^/cserial-view
+RewriteCond %{QUERY_STRING} ^obj=8
+RewriteRule ^serial-view$ "/serial-addinf?walias=Effica" [R=301,L] 
+
+RewriteCond %{REQUEST_URI}  ^/project-view
+RewriteCond %{QUERY_STRING} ^walias=lanit
+RewriteRule ^project-view$ "/project-all?" [R=301,L]
+
+RewriteCond %{REQUEST_URI}  ^/predmet-view
+RewriteCond %{QUERY_STRING} ^obj=1
+RewriteRule ^predmet-view$ "/predmet-view?walias=named" [R=301,L]
+
+#NEW END
+
+RewriteCond %{HTTP_HOST} ^orgspace.ru
+RewriteRule (.*) https://www.orgspace.ru/$1 [R=301,l]
+
+RewriteCond  %{REQUEST_URI}  !^/(images|res|scp|icons|awstats|cgi-bin)/(.*)	
+RewriteRule ^(.*)$ "run.php?rurl=$1&%{QUERY_STRING}" [l]

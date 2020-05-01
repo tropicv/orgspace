@@ -1,0 +1,105 @@
+<chairs_view rurl="chairs-view" walias="wchairs" state="-4" last_state="0" obj="0" item="chairs" meth="view" base_path="run.php" port="80" server_name="devel.orgspace.ru" req_url="/chairs-view?walias=wchairs" proto="http">
+<list_all>
+</list_all>
+<chairs_db id="3" name="кресла дл€ персонала" short_name="кресла дл€ персонала" walias="wchairs" foto="" thumb="" baner="" add_foto="" baner_text="" slogan="“о, на чем работают" short_description="–абочие кресла ORGSPACE - это беспрецедентный уровень эргономики &#60;/BR&#62; по самой привлекательной цене, это исключительно европейские комплектующие &#60;/BR&#62;и, наконец, это самый большой гарантийный срок!" example="" srt="4" sh_tmb="1" sh_acs="0" sh_elem="0" sh_color="0" sh_fotogal="0" sh_arr="0" sh_promo="1" ch_type="0">
+  <foto>
+<extension>.jpg</extension>
+<width>158</width>
+<height>158</height>
+<image_id>1</image_id>
+<obj_prefix>chairs</obj_prefix>
+<obj_id>3</obj_id>
+<name>chairs_3_1.jpg</name>
+  </foto>
+  <baner>
+<extension>.jpg</extension>
+<width>358</width>
+<height>209</height>
+<image_id>3</image_id>
+<obj_prefix>chairs</obj_prefix>
+<obj_id>3</obj_id>
+<name>chairs_3_3.jpg</name>
+  </baner>
+  <add_foto>
+<extension>.jpg</extension>
+<width>158</width>
+<height>158</height>
+<image_id>4</image_id>
+<obj_prefix>chairs</obj_prefix>
+<obj_id>3</obj_id>
+<name>chairs_3_4.jpg</name>
+  </add_foto>
+</chairs_db>
+<list>
+</list>
+<list>
+  <chairsitem_db id="36" name="обзор ассортимента" code="" chairs_id="3" description="" short_description="" foto="" thumb="" srt="0" block="1"/>
+  <chairsitem_db id="5" name="Clever" code="Clever" chairs_id="3" description="" short_description="" foto="" thumb="" srt="1" block="0">
+    <foto>
+  <extension>.jpg</extension>
+  <width>108</width>
+  <height>150</height>
+  <image_id>1</image_id>
+  <obj_prefix>chairsitem</obj_prefix>
+  <obj_id>5</obj_id>
+  <name>chairsitem_5_1.jpg</name>
+    </foto>
+  </chairsitem_db>
+  <chairsitem_db id="84" name="reMIX" code="reMIX" chairs_id="3" description="" short_description="" foto="" thumb="" srt="2" block="0">
+    <foto>
+  <extension>.jpg</extension>
+  <width>108</width>
+  <height>150</height>
+  <image_id>1</image_id>
+  <obj_prefix>chairsitem</obj_prefix>
+  <obj_id>84</obj_id>
+  <name>chairsitem_84_1.jpg</name>
+    </foto>
+  </chairsitem_db>
+  <chairsitem_db id="80" name="Fansy" code="" chairs_id="3" description="" short_description="" foto="" thumb="" srt="4" block="0">
+    <foto>
+  <extension>.jpg</extension>
+  <width>108</width>
+  <height>150</height>
+  <image_id>1</image_id>
+  <obj_prefix>chairsitem</obj_prefix>
+  <obj_id>80</obj_id>
+  <name>chairsitem_80_1.jpg</name>
+    </foto>
+  </chairsitem_db>
+  <chairsitem_db id="68" name="Choose" code="" chairs_id="3" description="" short_description="" foto="" thumb="" srt="5" block="0">
+    <foto>
+  <extension>.jpg</extension>
+  <width>108</width>
+  <height>150</height>
+  <image_id>1</image_id>
+  <obj_prefix>chairsitem</obj_prefix>
+  <obj_id>68</obj_id>
+  <name>chairsitem_68_1.jpg</name>
+    </foto>
+  </chairsitem_db>
+  <chairsitem_db id="67" name="BeFine" code="" chairs_id="3" description="" short_description="" foto="" thumb="" srt="6" block="0">
+    <foto>
+  <extension>.jpg</extension>
+  <width>108</width>
+  <height>150</height>
+  <image_id>1</image_id>
+  <obj_prefix>chairsitem</obj_prefix>
+  <obj_id>67</obj_id>
+  <name>chairsitem_67_1.jpg</name>
+    </foto>
+  </chairsitem_db>
+  <chairsitem_db id="69" name="Headway" code="" chairs_id="3" description="" short_description="" foto="" thumb="" srt="7" block="0">
+    <foto>
+  <extension>.jpg</extension>
+  <width>108</width>
+  <height>150</height>
+  <image_id>1</image_id>
+  <obj_prefix>chairsitem</obj_prefix>
+  <obj_id>69</obj_id>
+  <name>chairsitem_69_1.jpg</name>
+    </foto>
+  </chairsitem_db>
+</list>
+<title title="серии - кресла дл€ персонала"/>
+</chairs_view>

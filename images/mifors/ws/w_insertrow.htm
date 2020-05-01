@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Вставить строки в таблицу</title>
+<link href="index.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="Cache-Control" content="no-cache">
+<script language="JavaScript" type="text/javascript">
+function save()
+{
+if (document.all.count.value=='' || document.all.count.value==0) alert("Не задано количество строк");
+else {
+	var valArray = new Array;
+	valArray['count'] = window.document.all.count.value;
+	if (window.document.all.radio[0].checked) valArray['radio'] = 0;
+	if (window.document.all.radio[1].checked) valArray['radio'] = 1;
+	window.returnValue = valArray;
+	window.close();
+     }
+}
+</script>
+</head>
+
+<body bgcolor="#ffffff" text="#000000" leftmargin="4" topmargin="8" rightmargin="4" bottommargin="8">
+<div align="center">
+<table border="0" cellspacing="0" cellpadding="0" class="sm">
+<tr><td>Количество строк: <input class="input" type="text" name="count" value="1" size="8"><br><img src="1x1.gif" width="1" height="8" alt=""><br>
+<input type="radio" name="radio" checked>Вставить перед текущей строкой<br>
+<input type="radio" name="radio">Вставить после текущей строки<br><img src="1x1.gif" width="1" height="8" alt=""><br>
+</td></tr></table>
+
+<input type="image" src="b13.gif" width="89" height="21" border="0" alt="ОК" onClick="save()">
+<input type="image" src="b12.gif" width="89" height="21" border="0" alt="Отменить" onClick="window.close()">
+</div>
+</body>
+</html>

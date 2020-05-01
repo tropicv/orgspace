@@ -1,0 +1,130 @@
+RET /container-edit?obj=914
+select * from bush order by parent,pos,title;
+call /chairs-view?walias=wchairs
+END  
+select * from usr where nick='orgadmin1';
+CALL chairs.view
+set ses param ret_point=
+select * from chairs where ch_type= order by srt,name,id;
+trace error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by srt,name,id' at line 1
+.dbg_err [67]
+mysql_dbc.query [44]
+basic_db.query [189]
+chairs_db.list_abc [35]
+chairs.list_all [88]
+chairs.sh_chairs [100]
+chairs.view [124]
+.call_user_func_array []
+basic_manager.invoke_method [88]
+basic_manager.process [55]
+.main [134]
+select * from chairs where walias='wchairs';
+select * from imagegal where supp_type='chairs' and supp_id=3 and ftype=0 order by srt,name,id;
+select * from chairsitem where chairs_id=3 order by srt,name,id;
+select * from usr where nick='orgadmin1';
+CALL news.last
+select * from news order by event_date desc,topic;
+select * from usr where nick='orgadmin1';
+CALL container.glossary
+select count(*) as cnt from container where is_glossary=1;
+select *  from container where is_glossary=1;
+select * from usr where nick='orgadmin1';
+CALL banner.get
+select * from container where walias='wchairs';
+select count(*) as cnt from banner where is_public=1;
+select *  from banner where is_public=1 order by id;
+select * from usr where nick='orgadmin1';
+CALL bush.rubr
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------1
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------0
+----------------------1
+----------------------0
+----------------------0
+----------------------1
+select * from usr where nick='orgadmin1';
+CALL container.view
+select * from container where walias='botm_link';
+select * from element where container_id=361 order by layer,vpos,hpos,id;
+select * from usr where nick='orgadmin1';
+CALL tobj.view
+select * from tobj where id=1545 order by id;
+ TEMPL NAME html
+select * from usr where nick='orgadmin1';
+CALL tobj.view
+select * from tobj where id=361 order by id;
+ TEMPL NAME default
+select * from usr where nick='orgadmin1';
+CALL tobj.view
+select * from tobj where id=2721 order by id;
+ TEMPL NAME default
+select * from usr where nick='orgadmin1';
+CALL tobj.view
+select * from tobj where id=2791 order by id;
+ TEMPL NAME default
+select * from usr where nick='orgadmin1';
+CALL tobj.view
+select * from tobj where id=3551 order by id;
+ TEMPL NAME default
+select * from usr where nick='orgadmin1';
+CALL container.view
+select * from container where walias='botm_link';
+select * from element where container_id=361 order by layer,vpos,hpos,id;
+select * from usr where nick='orgadmin1';
+CALL tobj.view
+select * from tobj where id=1545 order by id;
+ TEMPL NAME html
+select * from usr where nick='orgadmin1';
+CALL tobj.view
+select * from tobj where id=361 order by id;
+ TEMPL NAME default
+select * from usr where nick='orgadmin1';
+CALL tobj.view
+select * from tobj where id=2721 order by id;
+ TEMPL NAME default
+select * from usr where nick='orgadmin1';
+CALL tobj.view
+select * from tobj where id=2791 order by id;
+ TEMPL NAME default
+select * from usr where nick='orgadmin1';
+CALL tobj.view
+select * from tobj where id=3551 order by id;
+ TEMPL NAME default
+select * from usr where nick='orgadmin1';
+CALL container.wrapper
+===== item = chairs meth = view
+===== key = walias val = wchairs
+select * from wrapper where item='chairs' and meth='view'  and (params LIKE '%?walias=wchairs?%');
+select * from container where id=424 order by id;
+select * from element where container_id=424 order by layer,vpos,hpos,id;
+select * from usr where nick='orgadmin1';
+CALL nav.view
+select * from nav where id=588 order by id;
+ TEMPL NAME navlevel1
+select * from usr where nick='orgadmin1';
+CALL usr.accessinfo
+select * from usr where nick='orgadmin1';
