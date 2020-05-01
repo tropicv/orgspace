@@ -19,7 +19,6 @@ include_once("classes/orgspace/manager.php");
 
 
 include_once("classes/orgspace/interactiv/callback.php");
-include_once("classes/orgspace/interactiv/chairs.php");
 include_once("classes/orgspace/interactiv/subscr.php");
 include_once("classes/orgspace/interactiv/kmore.php");
 include_once("classes/orgspace/interactiv/ordcat.php");

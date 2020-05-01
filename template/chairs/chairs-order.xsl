@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="windows-1251" standalone="no"?>
 <!DOCTYPE xsl:stylesheet SYSTEM "../ent.dtd">
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<xsl:include href="../layout/main.xsl"/> 
-<xsl:include href="../layout/level4/level4.xsl"/> 
-<xsl:include href="../layout/level4/dorgl4.xsl"/> 
-<xsl:include href="../layout/level4/dbuyl4.xsl"/> 
+<xsl:include href="../layout/level4/goodsl4.xsl"/> 
 
 
 <xsl:template match="chairs_order"> 
