@@ -230,7 +230,7 @@
 <tr>
 <td><img src="/images/dot.gif" width="1" height="1" border="0"/><br/></td>
 <td class="wtext">
-    <div style="margin: 5px 0;"><a href="#" style="padding: 5px 0;">TEST</a></div>
+    <div style="margin: 5px 0;"><a href="#" style="padding: 5px 0;">ЗАКАЗАТЬ</a></div>
 </td>
 </tr>
 <tr><td colspan="2">
