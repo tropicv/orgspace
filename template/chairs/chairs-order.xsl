@@ -7,7 +7,7 @@
 <xsl:include href="../chairs/chairsblock.xsl"/>
 
 
-<xsl:template match="chairs_example"> 
+<xsl:template match="chairs_order"> 
 
 <xsl:choose>
  <xsl:when test="$wrapper/container_db">
@@ -36,11 +36,11 @@
 
 </xsl:template>
 
-<xsl:template match="chairs_example" mode="title"> 
+<xsl:template match="chairs_order" mode="title"> 
 <a class="white" href="chairs-view?walias={chairs_db/@walias}"><xsl:value-of select="chairs_db/@short_name"/></a>
 </xsl:template>
 
-<xsl:template match="chairs_example" mode="path"> 
+<xsl:template match="chairs_order" mode="path"> 
 
 <xsl:variable name="chairs" select="chairs_db"/>
 
@@ -54,7 +54,7 @@
 
 </xsl:template>
 
-<xsl:template match="chairs_example" mode="left_start"> 
+<xsl:template match="chairs_order" mode="left_start"> 
    <!-- 2017-06-07 
    <xsl:call-template name="res_image_stuff">
           <xsl:with-param name="id" select="concat('chairs_',concat(chairs_db/@id,'_4'))"/>
@@ -65,19 +65,19 @@
    -->
 </xsl:template>
 
-<xsl:template match="chairs_example" mode="left_end"> 
+<xsl:template match="chairs_order" mode="left_end"> 
 </xsl:template>
 
-<xsl:template match="chairs_example" mode="content_title"> 
+<xsl:template match="chairs_order" mode="content_title"> 
  <xsl:value-of select="chairs_db/@name"/>
 </xsl:template>
 
-<xsl:template match="chairs_example" mode="content_start"> 
+<xsl:template match="chairs_order" mode="content_start"> 
 </xsl:template>
 
 
 <!-- TEST CHAIRS -->
-<xsl:template match="chairs_example" mode="content_end"> 
+<xsl:template match="chairs_order" mode="content_end"> 
 
 
 <xsl:if test="not($wrapper/container_db/element_db[@layer=2])">
@@ -198,7 +198,7 @@
 
 
 
-<xsl:template match="chairs_example" mode="right_start"> 
+<xsl:template match="chairs_order" mode="right_start"> 
 
 <xsl:variable name="chairs" select="chairs_db"/>
 <xsl:variable name="chairsitem" select="chairsitem_db"/>
@@ -232,13 +232,13 @@
 
 </xsl:template>
 
-<xsl:template match="chairs_example" mode="right_end"> 
+<xsl:template match="chairs_order" mode="right_end"> 
 </xsl:template>
 
-<xsl:template match="chairs_example" mode="under_start"> 
+<xsl:template match="chairs_order" mode="under_start"> 
 </xsl:template>
 
-<xsl:template match="chairs_example" mode="under_end"> 
+<xsl:template match="chairs_order" mode="under_end"> 
 </xsl:template>
 
 
