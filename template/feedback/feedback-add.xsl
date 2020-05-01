@@ -188,7 +188,7 @@
 <tr>
 <td colspan="2"><img src="/images/dot.gif" width="1" height="20" border="0"/></td>
 </tr>
-
+ 
 <tr>
 <td colspan="2">* Введите код с картинки</td>
 </tr>
