@@ -95,9 +95,9 @@
 <br/>
 <p>* <xsl:value-of select="$lc/feedback/req"/></p>
 
- <form name="ordcat" id="ordcat" method="POST" action="ordcat-add?state=1" enctype="multipart/form-data">
+ <form name="ordcat" id="ordcat" method="POST" action="chairs-order?state=1" enctype="multipart/form-data">
 
-<xsl:variable name="c" select="ordcat_db"/>
+<xsl:variable name="c" select="chairs_db"/>
 
 <table class="fbuy" border="0" cellspacing="0" cellpadding="0" >
 
@@ -174,7 +174,7 @@
   <input onclick="reset_form('ordcat');return false;" type="image" src="/images/clear{$lc/@pref}.gif" width="68" height="14" border="0" align="absmiddle" alt="{$lc/clear}" title="{$lc/clear}"/>
 -->
 <xsl:call-template name="form_button">
-<xsl:with-param name="name_form">ordcat</xsl:with-param>
+<xsl:with-param name="name_form">chairs</xsl:with-param>
 </xsl:call-template>
 </td>
 </tr>
