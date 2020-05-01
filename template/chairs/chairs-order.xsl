@@ -7,7 +7,7 @@
 <xsl:include href="../layout/level4/dbuyl4.xsl"/> 
 
 
-<xsl:template match="chairs_query"> 
+<xsl:template match="chairs_order"> 
 
 <xsl:choose>
  <xsl:when test="$wrapper/container_db">
@@ -36,34 +36,34 @@
 
 </xsl:template>
 
-<xsl:template match="chairs_query" mode="title"> 
+<xsl:template match="chairs_order" mode="title"> 
 
 <xsl:if test="not($wrapper/container_db/element_db[@layer=5])">
 <xsl:value-of select="$lc/chairs/alt"/>
 </xsl:if>
 </xsl:template>
 
-<xsl:template match="chairs_query" mode="path"> 
+<xsl:template match="chairs_order" mode="path"> 
 <xsl:if test="not($wrapper/container_db/element_db[@layer=111])">
 <a href="/">Orgspace</a> : 
 <xsl:value-of select="$lc/chairs/alt"/>
 </xsl:if>
 </xsl:template>
 
-<xsl:template match="chairs_query" mode="left_start"> 
+<xsl:template match="chairs_order" mode="left_start"> 
 </xsl:template>
 
-<xsl:template match="chairs_query" mode="left_end">
+<xsl:template match="chairs_order" mode="left_end">
 </xsl:template>
 
-<xsl:template match="chairs_query" mode="content_title">  
+<xsl:template match="chairs_order" mode="content_title">  
 <xsl:value-of select="$lc/chairs/alt"/>
 </xsl:template>
 
-<xsl:template match="chairs_query" mode="content_start"> 
+<xsl:template match="chairs_order" mode="content_start"> 
 </xsl:template>
 
-<xsl:template match="chairs_query" mode="content_end"> 
+<xsl:template match="chairs_order" mode="content_end"> 
 
 <xsl:if test="not($wrapper/container_db/element_db[@layer=2])">
 <h1><xsl:value-of select="$lc/chairs/@name"/></h1>
@@ -81,7 +81,7 @@
 <p>* <xsl:value-of select="$lc/feedback/req"/></p>
 
 
- <form name="chairs" id="chairs" method="POST" action="chairs-query?state=1" enctype="multipart/form-data">
+ <form name="chairs" id="chairs" method="POST" action="chairs-order?state=1" enctype="multipart/form-data">
 
 
 <xsl:variable name="c" select="callback_db"/>
@@ -189,22 +189,22 @@
 
 </xsl:template>
 
-<xsl:template match="chairs_query" mode="right_start"> 
+<xsl:template match="chairs_order" mode="right_start"> 
 <xsl:if test="not($wrapper/container_db/element_db[@layer=3])">
 <xsl:value-of select="$lc/chairs/@name"/>
 </xsl:if>
 </xsl:template>
 
-<xsl:template match="chairs_query" mode="right_end"> 
+<xsl:template match="chairs_order" mode="right_end"> 
 </xsl:template>
 
-<xsl:template match="chairs_query" mode="right_print"> 
+<xsl:template match="chairs_order" mode="right_print"> 
 </xsl:template>
 
-<xsl:template match="chairs_query" mode="under_start"> 
+<xsl:template match="chairs_order" mode="under_start"> 
 </xsl:template>
 
-<xsl:template match="chairs_query" mode="under_end"> 
+<xsl:template match="chairs_order" mode="under_end"> 
 </xsl:template>
 
 
