@@ -213,10 +213,27 @@ class chairs extends basic_manager {
     switch ($state){
 
       case INIT_STATE:
+				d_put($f);
+				$s=$this->sh_chairs();
 
-       d_put($f);
+				$g=new chairsitem_db();
+				$g->get_obj(get_obj());
+				//$g->list_chairs_by_name(get_param("name"));
+				d_put($g);
 
-       return $this->exit_code(EXIT_OK);
+				$g->list_chairs($g->getf("chairs_id"));
+				d_open_node("list_all_goods","");
+				while($g->lst()){
+						$tmp["name"]=$g->getf("name");
+						$tmp["id"]=$g->getf("id");
+						$tmp["block"]=$g->getf("block");
+						d_put_node("list_one",$tmp);
+				}
+				d_close();  
+
+				set_title("кресла и стулья - ".$s->getf("short_name")." - ".$g->getf("name")."Заказать кресло");	
+
+				return $this->exit_code(EXIT_OK);
 
       case SAVE_STATE:
 
