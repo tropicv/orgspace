@@ -84,7 +84,7 @@
  <form name="chairs" id="chairs" method="POST" action="chairs-order?state=1" enctype="multipart/form-data">
 
 
-<xsl:variable name="c" select="callback_db"/>
+<xsl:variable name="c" select="chairs_db"/>
 
 <table class="fbuy" border="0" cellspacing="0" cellpadding="0" >
 
