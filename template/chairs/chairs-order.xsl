@@ -27,9 +27,7 @@
 	</xsl:call-template>
 
 	<xsl:if test="$admin=1">
-		[<a href="chairs-edit?obj={chairs_db/@id}">–едактировать кресла</a>]
-		[<a href="chairsitem-edit?obj={chairsitem_db/@id}">–едактировать экземпл€р</a>]
-		[<a href="container-managewrapper?i=chairs&amp;m=example&amp;walias={chairs_db/@walias}&amp;obj={chairsitem_db/@id}&amp;creator=container.view.goodsl4" target="blank">–едактировать шаблон</a>]
+		[<a href="container-managewrapper?i=chairs&amp;m=order&amp;state={@last_state}&amp;creator=container.view.goodsl4" target="blank">–едактировать шаблон</a>]
 	</xsl:if>
 </xsl:template>
 
