@@ -68,7 +68,7 @@
 <!-- TEST CHAIRS -->
 <xsl:template match="chairs_order" mode="content_end"> 
 	<xsl:if test="not($wrapper/container_db/element_db[@layer=2])">
-		<h1><xsl:value-of select="$lc/chairsorder_db/@title"/></h1>
+		<h1><xsl:value-of select="chairsorder_db/@title"/></h1>
 	</xsl:if>
 
 	<xsl:choose>
