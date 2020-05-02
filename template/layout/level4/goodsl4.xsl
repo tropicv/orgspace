@@ -222,7 +222,7 @@
 </table>
 
 <!-- TEST CHAIRS -->
- <xsl:if test="../@rurl!='chairs-order'">
+ <xsl:if test="../@rurl!='chairs-order' and ../@rurl='chairs-example'">
 	<table border="0" cellspacing="0" cellpadding="0" width="205" class="{$class}">
 	<tr>
 		<td colspan="2">
