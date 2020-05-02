@@ -233,7 +233,7 @@
 	<tr>
 		<td><img src="/images/dot.gif" width="1" height="1" border="0"/><br/></td>
 		<td class="wtext">
-			<div style="margin: 5px 0;"><a href="chairs-order?walias={../@walias}&obj={../@obj}" style="padding: 5px 0;">Заказать</a></div>
+			<div style="margin: 5px 0;"><a href="chairs-order?walias={../@walias}&amp;obj={../@obj}" style="padding: 5px 0;">Заказать</a></div>
 		</td>
 	</tr>
 	<tr>
