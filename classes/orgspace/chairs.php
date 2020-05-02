@@ -250,7 +250,7 @@ class chairs extends basic_manager {
 
        form_to_db("Заказать кресло",$res);
 
-       mail_msg_html(get_proper("client_mail_to"),"Заказать кресло с www.orgspace.ru",$res);
+       mail_msg_html(get_proper("chairs_order_mail_to"),"Заказать кресло с www.orgspace.ru",$res);
 
        go_to("chairs-order?state=2");  
        return $this->exit_code(EXIT_EXTERNAL_REDIRECT);
