@@ -43,7 +43,7 @@
 	<div class="path">
 		<xsl:call-template name="chairspath"/>
 		<a href="chairs-view?walias={$chairs/@walias}"><xsl:value-of select="$chairs/@name"/></a> :
-		<a href="chairs-examle?walias={chairsitem_db/@name}"><xsl:value-of select="chairsitem_db/@name"/></a> : Заказать кресло
+		<a href="chairs-examle?walias={$chairs/@walias}&amp;obj={$chairs/@obj}"><xsl:value-of select="chairsitem_db/@name"/></a> : Заказать кресло
 	</div>
 </xsl:template>
 
