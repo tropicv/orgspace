@@ -82,6 +82,9 @@
 				<xsl:variable name="c" select="chairsorder_db"/>
 				<table class="fbuy" border="0" cellspacing="0" cellpadding="0" >
 					<tr>
+						<td colspan="2"><input type="hidden" name="tel" size="45" value="{chairsitem_db/@walias}"/></td>
+					</tr>
+					<tr>
 						<td colspan="2">* <xsl:value-of select="$lc/feedback/name"/></td>
 					</tr>
 					<tr>

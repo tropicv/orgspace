@@ -9,6 +9,7 @@ class chairsorder_db extends basic_db {
       $this->tadd("name",new str_type(1,"",512));
       $this->tadd("mail",new str_type(1,"",512));
       $this->tadd("tel",new str_type(1,"",512));
+      $this->tadd("walias",new str_type(1,"",512));
       $this->tadd("coment",new text_type(0,"",get_max_clob_size()));
   }    
 
@@ -245,6 +246,7 @@ class chairs extends basic_manager {
        $res.="<b>* Имя</b>: " .$f->getf("name")."<br>";
        $res.="<b>* E-mail</b>: " .$f->getf("mail")."<br>";
        $res.="<b>* Телефон</b>: " .$f->getf("tel")."<br>";
+       $res.="<b>* Алиас</b>: " .$f->getf("walias")."<br>";
        $res.="<b>Комментарии</b>: <br>" .str_replace("&#13;&#10;","<br>",$f->getf("coment"))."<br><br>";
        $res.="<br><hr><br>Orgspace.ru</body></html>";
 
