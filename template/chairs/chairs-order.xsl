@@ -80,7 +80,7 @@
 			<p>* <xsl:value-of select="$lc/feedback/req"/></p>
 			<form name="ordcat" id="ordcat" method="POST" action="chairs-order?state=1" enctype="multipart/form-data">
 				<xsl:variable name="c" select="chairsorder_db"/>
-				<table class="fbuy" border="0" cellspacing="0" cellpadding="0" >
+				<table class="feedback" border="0" cellspacing="0" cellpadding="0" >
 					<tr>
 						<td colspan="2"><input type="hidden" name="walias" size="45" value="{chairsitem_db/@name}"/></td>
 					</tr>
