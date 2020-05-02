@@ -172,7 +172,7 @@
 			<div class="rmenu" name="orgmenu14head" id="orgmenu14head">
 				<xsl:choose>
 					<xsl:when test="$chairsitem/@id=@id"><xsl:value-of select="@name"/></xsl:when>
-					<xsl:otherwise><a href="chairs-example?walias={$chairs/@walias}&amp;obj={@id}"><xsl:value-of select="@name"/></a></xsl:otherwise>
+					<xsl:otherwise><a href="chairs-order?walias={$chairs/@walias}&amp;obj={@id}"><xsl:value-of select="@name"/></a></xsl:otherwise>
 				</xsl:choose>
 			</div>
 		</td>
