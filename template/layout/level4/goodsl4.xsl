@@ -222,23 +222,28 @@
 </table>
 
 <!-- TEST CHAIRS -->
-<table border="0" cellspacing="0" cellpadding="0" width="205" class="{$class}">
-<tr><td colspan="2">
-<div class="fleft"><img src="/images/c-tl.gif" width="6" height="6" border="0"/></div>
-<div align="right"><img src="/images/c-tr.gif" width="6" height="6" border="0"/></div>
-</td></tr>
-<tr>
-<td><img src="/images/dot.gif" width="1" height="1" border="0"/><br/></td>
-<td class="wtext">
-    <div style="margin: 5px 0;"><a href="chairs-order?" style="padding: 5px 0;">Заказать</a></div>
-</td>
-</tr>
-<tr><td colspan="2">
-<div class="fleft"><img src="/images/c-bl.gif" width="6" height="6" border="0"/></div>
-<div align="right"><img src="/images/c-br.gif" width="6" height="6" border="0"/></div>
-</td></tr>
-</table>
-
+ <xsl:if test="../@rurl!='chairs-order'">
+	<table border="0" cellspacing="0" cellpadding="0" width="205" class="{$class}">
+	<tr>
+		<td colspan="2">
+			<div class="fleft"><img src="/images/c-tl.gif" width="6" height="6" border="0"/></div>
+			<div align="right"><img src="/images/c-tr.gif" width="6" height="6" border="0"/></div>
+		</td>
+	</tr>
+	<tr>
+		<td><img src="/images/dot.gif" width="1" height="1" border="0"/><br/></td>
+		<td class="wtext">
+			<div style="margin: 5px 0;"><a href="chairs-order?" style="padding: 5px 0;">Заказать</a></div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<div class="fleft"><img src="/images/c-bl.gif" width="6" height="6" border="0"/></div>
+			<div align="right"><img src="/images/c-br.gif" width="6" height="6" border="0"/></div>
+		</td>
+	</tr>
+	</table>
+</xsl:if>
 
 
 </td>
