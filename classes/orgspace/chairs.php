@@ -5,6 +5,7 @@
 class chairsorder_db extends basic_db {
   function load_class(){
       parent::load_class();
+      $this->tadd("title",new str_type(1,"Заказать кресло",512));
       $this->tadd("name",new str_type(1,"",512));
       $this->tadd("mail",new str_type(1,"",512));
       $this->tadd("tel",new str_type(1,"",512));
@@ -204,8 +205,6 @@ class chairs extends basic_manager {
 	
 	
 	function order($state) {
-    set_title("Заказать кресло");  
-
     $f=new chairsorder_db();
     $f->create_default();
     $f->set_expand_dictonary(true);
@@ -231,7 +230,7 @@ class chairs extends basic_manager {
 				}
 				d_close();  
 
-				set_title("кресла и стулья - ".$s->getf("short_name")." - ".$g->getf("name")."Заказать кресло");	
+				set_title("кресла и стулья - ".$s->getf("short_name")." - ".$g->getf("name")." - Заказать кресло");	
 
 				return $this->exit_code(EXIT_OK);
 

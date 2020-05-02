@@ -33,7 +33,7 @@
 
 
 <xsl:template match="chairs_order" mode="title"> 
-	<a class="white" href="chairs-view?walias={chairs_db/@walias}"><xsl:value-of select="chairs_db/@short_name"/></a>
+	<a class="white" href="chairs-view?walias={chairs_db/@walias}"><xsl:value-of select="chairsorder_db/@title"/></a>
 </xsl:template>
 
 
@@ -57,7 +57,7 @@
 
 
 <xsl:template match="chairs_order" mode="content_title"> 
- <xsl:value-of select="chairs_db/@name"/>
+ <xsl:value-of select="chairsorder_db/@title"/>
 </xsl:template>
 
 
