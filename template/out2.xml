@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<ru_full>
+  <user_menu rurl="" state="-4" last_state="0" obj="0" item="welcome" meth="view" base_path="run.php" port="80" server_name="pm.mifors.com:8088" req_url="/" proto="http">
+    <panel_welcome/>
+  </user_menu>
+  <content>
+<welcome_view rurl="" state="-4" last_state="0" obj="0" item="welcome" meth="view" base_path="run.php" port="80" server_name="pm.mifors.com:8088" req_url="/" proto="http">
+</welcome_view>
+  </content>
+  <promo rurl="" state="-4" last_state="0" obj="0" item="welcome" meth="view" base_path="run.php" port="80" server_name="pm.mifors.com:8088" req_url="/" proto="http">
+<news_last>
+</news_last>
+<container_glossary>
+</container_glossary>
+<banner_get>
+</banner_get>
+<promo_view walias="main">
+<promo_db id="8" type="1" image="" alt="Текстовый блок" link="" flash="" sizex="500" sizey="300" aligment="2" textbody="&#60;TABLE border=0 cellPadding=0 cellSpacing=0&#62;&#13;&#10;&#60;TBODY&#62;&#13;&#10;&#60;TR&#62;&#13;&#10;&#60;TD width=20&#62;&#38;nbsp; &#13;&#10;&#60;TD&#62;&#13;&#10;&#60;TD&#62;&#13;&#10;&#60;P align=left&#62;&#38;nbsp;&#38;nbsp;&#38;nbsp;&#38;nbsp;&#38;nbsp;В 2004 году Мебельная фабрика &#34;Проммебель&#34; была выбрана производственной базой для принципиально новой концепции &#60;A href=&#34;http://www.orgspace.ru/&#34; target=_blank title=&#34;Офисная мебель ORGSPACE&#34;&#62;офисной мебели &#60;B&#62;ORGSPACE&#60;B&#62;&#60;A&#62;.&#60;BR&#62;&#60;A href=&#34;http://www.orgspace.ru/&#34; target=_blank&#62;&#60;IMG alt=&#34;Офисная мебель ORGSPACE&#34; border=0 height=130 src=&#34;http://www.prommebel.ru/images/orglogo2.jpg&#34; width=300&#62;&#60;A&#62;&#60;B&#62;&#60;B&#62; &#13;&#10;&#60;P&#62;&#60;/P&#62;&#60;/B&#62;&#60;/B&#62;&#60;/A&#62;&#60;/B&#62;&#60;/B&#62;&#13;&#10;&#60;TD&#62;&#13;&#10;&#60;TR&#62;&#60;/TR&#62;&#13;&#10;&#60;TBODY&#62;&#60;/TBODY&#62;&#60;/TABLE&#62;&#13;&#10;&#60;TABLE&#62;&#13;&#10;&#60;TBODY&#62;&#60;/TBODY&#62;&#60;/TABLE&#62;" open_date="01.01.1970" is_public="1">
+  <type>
+<name>Текст блок</name>
+  </type>
+  <aligment>
+<name>По центру</name>
+  </aligment>
+</promo_db>
+</promo_view>
+  </promo>
+  <menu rurl="" state="-4" last_state="0" obj="0" item="welcome" meth="view" base_path="run.php" port="80" server_name="pm.mifors.com:8088" req_url="/" proto="http">
+<bush_rubr walias="site">
+<bush_db id="21" title="главная страница" walias="site" parent="2" type="2" pos="0" url="welcome" link="2" block="0" notshow="0" container="30">
+  <bush_db id="40" title="продукты" walias="products" parent="21" type="0" pos="1" url="" link="2" block="0" notshow="0" container="49">
+    <bush_db id="46" title="зоны офиса" walias="" parent="40" type="2" pos="1" url="zone-all" link="2" block="0" notshow="0" container="0"/>
+    <bush_db id="47" title="серии" walias="" parent="40" type="2" pos="2" url="serial-all" link="2" block="0" notshow="0" container="0"/>
+    <bush_db id="48" title="предметы" walias="" parent="40" type="2" pos="3" url="predmet-all" link="2" block="0" notshow="0" container="0"/>
+    <bush_db id="120" title="test" walias="aboutprod" parent="40" type="0" pos="4" url="" link="2" block="0" notshow="1" container="230"/>
+  </bush_db>
+  <bush_db id="22" title="услуги" walias="services" parent="21" type="0" pos="2" url="" link="2" block="0" notshow="0" container="31">
+    <bush_db id="23" title="консалтинг" walias="consulting" parent="22" type="0" pos="0" url="" link="2" block="0" notshow="0" container="32"/>
+    <bush_db id="27" title="проектирование офиса" walias="designing" parent="22" type="0" pos="0" url="" link="2" block="0" notshow="0" container="36"/>
+  </bush_db>
+  <bush_db id="28" title="ноу-хау" walias="knowhow" parent="21" type="0" pos="3" url="" link="2" block="0" notshow="0" container="37">
+    <bush_db id="29" title="эффективный офис" walias="effect" parent="28" type="0" pos="0" url="" link="2" block="0" notshow="0" container="38"/>
+    <bush_db id="56" title="проекты" walias="projects" parent="28" type="0" pos="3" url="" link="2" block="0" notshow="0" container="60"/>
+  </bush_db>
+  <bush_db id="30" title="как купить" walias="how2buy" parent="21" type="0" pos="4" url="" link="2" block="0" notshow="0" container="39">
+    <bush_db id="32" title="общая информация" walias="commoninfo" parent="30" type="0" pos="0" url="" link="2" block="0" notshow="0" container="41"/>
+    <bush_db id="31" title="рекомендации" walias="recomendations" parent="30" type="0" pos="0" url="" link="2" block="0" notshow="0" container="40"/>
+  </bush_db>
+  <bush_db id="33" title="об orgspace" walias="about" parent="21" type="0" pos="5" url="" link="2" block="0" notshow="0" container="42">
+    <bush_db id="34" title="философия бренда" walias="philosophy" parent="33" type="0" pos="0" url="" link="2" block="0" notshow="0" container="43"/>
+    <bush_db id="58" title="новости" walias="news" parent="33" type="0" pos="2" url="" link="2" block="0" notshow="0" container="62"/>
+    <bush_db id="60" title="структура Orgspace" walias="structure" parent="33" type="0" pos="4" url="" link="2" block="0" notshow="0" container="64"/>
+    <bush_db id="61" title="контакты" walias="contacts" parent="33" type="0" pos="5" url="" link="2" block="0" notshow="0" container="65"/>
+    <bush_db id="126" title="Заявка на звонок" walias="" parent="33" type="2" pos="7" url="callback1-add" link="2" block="0" notshow="0" container="0"/>
+  </bush_db>
+  <bush_db id="94" title="FAQ" walias="faq" parent="21" type="0" pos="6" url="" link="2" block="0" notshow="0" container="85">
+  </bush_db>
+  <bush_db id="119" title="ссылки" walias="links" parent="21" type="0" pos="7" url="" link="2" block="0" notshow="0" container="226">
+  </bush_db>
+  <bush_db id="67" title="карта сайта" walias="sitemap" parent="21" type="0" pos="10" url="" link="2" block="0" notshow="0" container="68">
+  </bush_db>
+  <bush_db id="117" title="Privacy Policy &#38; Legal Notice" walias="ppolicy" parent="21" type="0" pos="11" url="" link="2" block="0" notshow="0" container="219">
+  </bush_db>
+  <bush_db id="123" title="test1" walias="" parent="21" type="0" pos="50" url="" link="2" block="0" notshow="1" container="236">
+  </bush_db>
+</bush_db>
+</bush_rubr>
+  </menu>
+  <botm_link rurl="" state="-4" last_state="0" obj="0" item="welcome" meth="view" base_path="run.php" port="80" server_name="pm.mifors.com:8088" req_url="/" proto="http">
+<container_view walias="botm_link" no_return="yes">
+<list>
+  <bush_db id="2" title="" walias="" parent="0" type="2" pos="0" url="" link="10" block="0" notshow="0" container="0"/>
+  <bush_db id="21" title="главная страница" walias="site" parent="2" type="2" pos="0" url="welcome" link="2" block="0" notshow="0" container="30"/>
+  <bush_db id="124" title="test" walias="botm_link" parent="21" type="0" pos="50" url="" link="47" block="1" notshow="0" container="237"/>
+</list>
+<container_view_main>
+  <container_db id="237" creator="container.view.main" container_id="0" obj_id="0" layer="0" vpos="0" hpos="0" title="test" bwtitle="" walias="botm_link" keywords="" description="" is_glossary="0" glossary_text1="" glossary_text2="" block="1" noi="0" nof="0" nomenu="0">
+    <element_db id="1689" creator="tobj.view.default" container_id="237" obj_id="237" layer="0" vpos="0" hpos="0">
+      <tobj_view walias="botm_link" no_return="yes" item="tobj" meth="view" obj="237" last_state="" state="-4">
+      <tobj_db id="237" title="&#60;P&#62;&#60;FONT size=4&#62;Обзор ассортимента&#60;/FONT&#62;&#60;/P&#62;&#13;&#10;&#60;P&#62;Функциональный индекс&#60;/P&#62;&#13;&#10;&#60;P&#62;&#38;nbsp;&#60;/P&#62;"/>
+      </tobj_view>
+    </element_db>
+  </container_db>
+</container_view_main>
+<container_db id="237" creator="container.view.main" container_id="0" obj_id="0" layer="0" vpos="0" hpos="0" title="test" bwtitle="" walias="botm_link" keywords="" description="" is_glossary="0" glossary_text1="" glossary_text2="" block="1" noi="0" nof="0" nomenu="0"/>
+</container_view>
+  </botm_link>
+  <wrapper rurl="" state="-4" last_state="0" obj="0" item="welcome" meth="view" base_path="run.php" port="80" server_name="pm.mifors.com:8088" req_url="/" proto="http">
+<container_wrapper rurl="" state="-4" last_state="0" obj="0" item="container" meth="wrapper" base_path="run.php" port="80" server_name="pm.mifors.com:8088" req_url="/" proto="http" litem="welcome" lmeth="view">
+</container_wrapper>
+  </wrapper>
+<usr_accessinfo>
+</usr_accessinfo>
+<lc lang="ru" pref="">
+<serial name="серии">
+ <description>преимущества</description>
+ <color>цвета</color>
+ <example>примеры интерьеров</example>
+ <accessories>аксессуары</accessories>
+ <elements>элементы серии</elements>
+ <arrange>примеры компоновок</arrange>
+ <other>другие серии</other>
+</serial>
+
+<zone name="зоны офиса">
+ <example>примеры интерьеров</example>
+ <solution>решения Orgspace</solution>
+ <arrange>примеры компоновок</arrange>
+ <other>другие зоны офиса</other>
+</zone>
+
+<predmet name="предметы">
+ <assortment>обзор ассортимента</assortment>
+ <gallery>фотогалерея</gallery>
+ <other>другие предметы</other>
+</predmet>
+
+<goods name="предметы">
+ <serial>Серия</serial>
+ <name>Наименование</name>
+ <size>Размер</size>
+ <description>Описание</description>
+</goods>
+
+<gtype name="предметы"/>
+
+<project name="проекты">
+ <example>примеры реализованных проектов</example>
+ <search>Поиск проекта</search>
+ <search_res>результат поиска</search_res>
+ <recomend>отзывы и рекомендательные письма</recomend>
+ <review>отзыв по проекту</review>
+ <manager>менеджер</manager>
+ <author>Автор</author>
+ <main_manager>Ведущий менеджер</main_manager>
+ <zone>Зона офиса</zone>
+ <ni>Не важно</ni>
+ <obj_f>Характеристика объекта</obj_f>
+</project>
+
+<manager name="команда Orgspace">
+ <project>Реализованные проекты</project>
+ <company>компании Orgspace</company>
+ <for_diler>дилерам</for_diler>
+ <struct>структура Orgspace</struct>
+</manager>
+
+<feedback name="Форма для вопроса">
+ <err>Не все поля заполнены корректно</err>
+ <req>Поля для обязательного заполнения</req>
+ <thanks>Благодарим Вас за проявленный интерес, запрос отправлен в информационную службу.</thanks>
+ <quest>Вопрос</quest>
+ <name>Имя</name>
+ <comp>Компания</comp>
+ <tel>Телефон</tel>
+ <city>Город</city>
+ <fax>Факс</fax>
+ <know>Вы узнали о нас</know>
+</feedback>
+
+<callback name="Форма для заявки на звонок">
+ <alt>Звонок менеджера</alt>
+ <time>Время звонка</time>
+</callback>
+
+<subscr name="Форма для подписки">
+ <alt>Подписка</alt>
+ <alts>подписка</alts>
+</subscr>
+
+<kmore name="Форма для вопроса">
+ <alt>Узнать больше</alt>
+</kmore>
+
+<ordcat name="Форма для заказа каталога">
+ <alt>Новый каталог</alt>
+ <adr>Адрес доставки</adr>
+</ordcat>
+
+<ordcase name="Форма для заказа кейса">
+ <alt>Заказ кейса</alt>
+</ordcase>
+
+<register name="форма для регистрации">
+ <org_name>Название организации</org_name>
+ <org_form>Форма собственности</org_form>
+ <city>Город</city>
+ <cont_pers>Контактное лицо</cont_pers>
+ <city_code>Код города</city_code>
+ <tel>Контактные телефоны</tel>
+ <fax>Факс</fax>
+ <business>Род деятельности</business>
+ <know>Где Вы получили информацию о нас</know>
+ <add>Дополнительно</add>
+ <predl>Коммерческое предложение</predl>
+ <err>Имя пользователя или пароль не совпадают</err>
+ <login>Логин</login>
+ <passwd>Пароль</passwd>
+ <forg_passwd>Забыли пароль?</forg_passwd>
+ <register>Зарегистрироваться</register>
+ <sendmail>Пароль отправлен на указанный Вами адрес электронной почты.</sendmail>
+</register>
+
+<nav>
+ <ask_quest>задать вопрос</ask_quest>
+ <site_map>карта сайта</site_map>
+ <faq>ответы на часто задаваемые вопросы</faq>
+ <search>Поиск</search>
+ <search_res>Результат поиска</search_res>
+ <back>назад</back>
+ <top>Наверх</top>
+</nav>
+
+<furniture>Мебель для офиса</furniture>
+
+<main_page>главная страница</main_page>
+<products>продукты</products>
+<services>услуги</services>
+<know_how>ноу-хау</know_how>
+<how_to_buy>как купить</how_to_buy>
+<about_orgspace>об orgspace</about_orgspace>
+<news>новости</news>
+<up_news>Новости</up_news>
+
+<album>Альбом</album>
+<photo>Фото</photo>
+
+<you_know>А знаете ли Вы:</you_know>
+<print_ver>версия для печати </print_ver>
+<short_ver>Краткая версия</short_ver>
+<full_ver>Полная версия</full_ver>
+
+<send>Отправить</send>
+<clear>Очистить</clear>
+<enter>Войти</enter>
+
+</lc>
+</ru_full>

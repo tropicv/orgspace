@@ -1,0 +1,99 @@
+<?
+
+function dom_prepare($d){
+
+$bdom=$d->create();
+
+$bdom->open_node(get_lang()."_".get_ver(),"");
+    $bdom->open_node("user_menu",get_params());
+        $bdom->put_node("panel_".get_item(),"");    
+    $bdom->close();
+
+   
+    $bdom->open_node("content","");
+        $bdom->put_disp(&$d);
+    $bdom->close();
+
+    $bdom->open_node("promo",get_params());
+      $bdom->put_disp(run_manager("news","last"));
+      $bdom->put_disp(run_manager("container","glossary"));
+      $bdom->put_disp(run_manager("banner","get"));
+      if(get_item()=="welcome"){
+        $params["walias"]="main"; 
+        $bdom->put_disp(run_manager("promo","view",$params));          
+      }
+    $bdom->close();
+
+    $bdom->open_node("menu",get_params());
+      $params["walias"]="site"; 
+      $bdom->put_disp(run_manager("bush","rubr",$params));
+    $bdom->close();
+
+    $bdom->open_node("botm_link",get_params());
+      $prmbl["walias"]="botm_link"; 
+      $prmbl["no_return"]="yes"; 
+      $res=run_manager("container","view",$prmbl);
+      $bdom->put_disp(run_manager("container","view",$prmbl));
+    $bdom->close(); 
+
+    $bdom->open_node("wrapper",get_params());
+      $bdom->put_disp(run_manager_with_legacy("container","wrapper"));
+    $bdom->close();
+
+    $bdom->put_disp(run_manager("usr","accessinfo"));
+
+$bdom->add(load_text_file("template/lang_".get_lang().".xml"));
+
+$bdom->close();
+
+
+
+$xml="<?xml version=\"1.0\" encoding=\"windows-1251\"?>\n".$bdom->get_buffer();
+$xsl=load_text_file("template/xsl_head.xsl");
+$xsl.="<xsl:include href=\"".get_item()."/".get_item()."-".get_meth().".xsl\"/>\n";
+$xsl.=load_text_file("template/xsl_foot.xsl");
+
+
+
+
+save_file("debug/out2.xml",$xml);
+save_file("debug/out.xsl",$xsl);
+
+
+$savedir=getcwd();
+$workdir=getcwd()."/template";
+chdir($workdir);
+
+$xslt = new XSLTProcessor();
+$xslt->setParameter('', 'xml:base', $workdir);
+
+$xslt->importStyleSheet(DomDocument::loadXML($xsl));
+$html=$xslt->transformToXML(DomDocument::loadXML($xml));
+echo $html;
+chdir($savedir);
+
+
+/*
+
+$arguments = array(
+     '/_xml' => $xml,
+     '/_xsl' => $xsl
+);
+
+
+save_file("debug/out2.xml",$xml);
+save_file("debug/out.xsl",$xsl);
+
+$xh = xslt_create();
+
+$fileBase='file://'.getcwd ().'/template/';
+xslt_set_base($xh,$fileBase);
+$html = xslt_process($xh, 'arg:/_xml', 'arg:/_xsl', NULL, $arguments); 
+xslt_free($xh);
+
+*/
+
+save_file("debug/out.html",$html);
+
+}
+?>

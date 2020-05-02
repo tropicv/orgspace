@@ -1,0 +1,52 @@
+<table>
+<tr><td>
+
+<table>
+<tr>
+<td><div class="Btn" language="javascript" onClick="fontL()"><img alt="Larger Font" class="Ico" src="/images/mifors/ws/fontup.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="fontS()"><img alt="Smaller Font" class="Ico" src="/images/mifors/ws/fontdown.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="pre()"><img alt="PRE" class="Ico" src="/images/mifors/ws/wpre.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="createTable()"><img alt="Create table" class="Ico" src="/images/mifors/ws/wctable.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="setTable()"><img alt="table settings" class="Ico" src="/images/mifors/ws/wstable.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="setCell()"><img alt="cell settings" class="Ico" src="/images/mifors/ws/wcell.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="insertRow()"><img alt="Insert row" class="Ico" src="/images/mifors/ws/wirow.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="deleteRow()"><img alt="Delete Row" class="Ico" src="/images/mifors/ws/wdrow.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="insertColumn()"><img alt="Insert Column" class="Ico" src="/images/mifors/ws/wiclm.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="deleteColumn()"><img alt="Delete Row" class="Ico" src="/images/mifors/ws/wdclm.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="createStyledTable()"><img alt="Create Styled Table" class="Ico" src="/images/mifors/ws/wsttable.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="MyColor('forecolor')"><img alt="ForeColor" class="Ico" src="/images/mifors/ws/wfgc.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="MyColor('backcolor')"><img alt="BackColor" class="Ico" src="/images/mifors/ws/wbgc.gif"/></div></td>
+</tr>
+</table>
+
+</tr>
+<tr>
+<td>
+
+<table>
+<tr>
+<td><div class="Btn" language="javascript" onClick="formatC('cut')"><img class="Ico" src="/images/mifors/ws/cut.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="formatC('copy')"><img class="Ico" src="/images/mifors/ws/copy.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="formatC('paste')"><img class="Ico" src="/images/mifors/ws/paste.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="formatC('bold');"><img class="Ico" src="/images/mifors/ws/bold.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="formatC('italic')"><img class="Ico" src="/images/mifors/ws/italic.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="formatC('underline')"><img class="Ico" src="/images/mifors/ws/under.gif"/></div></td>
+<td><div class="Btn" name="Justify" language="javascript" onClick="formatC('justifyleft')"><img class="Ico" src="/images/mifors/ws/aleft.gif"/></div></td>
+<td><div class="Btn" name="Justify" language="javascript" onClick="formatC('justifycenter')"><img class="Ico" src="/images/mifors/ws/center.gif"/></div></td>
+<td><div class="Btn" name="Justify" language="javascript" onClick="formatC('justifyright')"><img class="Ico" src="/images/mifors/ws/aright.gif"/></div></td>
+<td><div class="Btn" name="Justify" language="javascript" onClick="formatC('justifyfull')"><img class="Ico" src="/images/mifors/ws/aj.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="formatC('insertorderedlist')"><img class="Ico" src="/images/mifors/ws/nlist.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="formatC('insertunorderedlist')"><img class="Ico" src="/images/mifors/ws/blist.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="formatC('outdent')"><img class="Ico" src="/images/mifors/ws/ileft.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="formatC('indent')"><img class="Ico" src="/images/mifors/ws/iright.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="createLink()"><img class="Ico" src="/images/mifors/ws/wlink.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="deleteLink()"><img alt="Delete Link" class="Ico" src="/images/mifors/ws/wdlink.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="insertSymbol()"><img alt="Insert Symbol" class="Ico" src="/images/mifors/ws/wsymb.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="formatC('subscript')"><img alt="subScript" class="Ico" src="/images/mifors/ws/wsub.gif"/></div></td>
+<td><div class="Btn" language="javascript" onClick="formatC('superscript')"><img alt="superScript" class="Ico" src="/images/mifors/ws/wsup.gif"/></div></td>
+</tr>
+</table>
+
+</tr>
+</table>
+	

@@ -24,17 +24,10 @@
 <xsl:if test="$admin=1">
 <xsl:choose>
 <xsl:when test="@last_state=1 or @last_state=2"> 
-<<<<<<< HEAD
-[<a href="container-managewrapper?i=feedback&amp;m=add&amp;state={@last_state}&amp;creator=container.view.dorgl4" target="blank">Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ С€Р°Р±Р»РѕРЅ</a>]
-</xsl:when>
-<xsl:otherwise>
-[<a href="container-managewrapper?i=feedback&amp;m=add&amp;creator=container.view.dorgl4" target="blank">Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ С€Р°Р±Р»РѕРЅ</a>]
-=======
 [<a href="container-managewrapper?i=feedback&amp;m=add&amp;state={@last_state}&amp;creator=container.view.dorgl4" target="blank">������������� ������</a>]
 </xsl:when>
 <xsl:otherwise>
 [<a href="container-managewrapper?i=feedback&amp;m=add&amp;creator=container.view.dorgl4" target="blank">������������� ������</a>]
->>>>>>> c89004e663cfed57cd82ee9a06e6bb8a37d3fe13
 </xsl:otherwise>
 </xsl:choose>
 </xsl:if>
@@ -197,11 +190,7 @@
 </tr>
 
 <tr>
-<<<<<<< HEAD
-<td colspan="2">* Р’РІРµРґРёС‚Рµ РєРѕРґ СЃ РєР°СЂС‚РёРЅРєРё</td>
-=======
 <td colspan="2">* ������� ��� � ��������</td>
->>>>>>> c89004e663cfed57cd82ee9a06e6bb8a37d3fe13
 </tr>
 <tr>
 <td colspan="2"><img src="./cap.php"/></td>

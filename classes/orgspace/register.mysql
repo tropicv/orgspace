@@ -1,0 +1,16 @@
+CREATE TABLE register (
+  id int(4) NOT NULL auto_increment,
+  company varchar(255) default NULL,
+  org_type varchar(255) default NULL,
+  town varchar(255) default NULL,
+  name varchar(255) default NULL,
+  cod varchar(255) default NULL,
+  tel varchar(255) default NULL,
+  fax varchar(255) default NULL,
+  email varchar(255) default NULL,
+  job_type varchar(255) default NULL,
+  hear_type int(4) default NULL,
+  quest text,
+  PRIMARY KEY  (id),
+  KEY i_project (id)
+) TYPE=MyISAM;
