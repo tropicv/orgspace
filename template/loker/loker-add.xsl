@@ -117,7 +117,7 @@
 						<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
 					</tr>
 					<tr>
-						<td colspan="2">* Комментарий</td>
+						<td colspan="2">Комментарий</td>
 					</tr>
 					<tr>
 						<td class="input"><textarea type="text" name="coment" size="45" value="{$c/@coment}"/></td>
