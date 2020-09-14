@@ -9,7 +9,7 @@ class loker_db extends basic_db {
       $this->tadd("name",new str_type(1,"",512));
       $this->tadd("tel",new str_type(1,"",512));
       $this->tadd("mail",new str_type(1,"",512));
-			$this->tadd("coment",new str_type(1,"",512));
+			$this->tadd("coment",new text_type(0,"",get_max_clob_size()));
   }    
   
 }
