@@ -409,6 +409,7 @@ table.mainpt	td.greenbottom	{ background: #41ad49;/*#8FA99A;*/ vertical-align: b
 table.mainpt td h1		{ padding-left: 0px; padding-top: 0px; margin-top: 0px; }
 
 div.intgreen,div.intgreen p	{padding-left: 15px; padding-top: 5px; font-size: 100%; color: #FFFFFF;}
+div.intgreen p { padding-right: 20px}
 div.intgreen a	{color: #FFFFFF;}
 
 a.mainall 			{font-size: 11px; color:#4E5C69; text-decoration: none;}
