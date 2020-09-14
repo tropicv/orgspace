@@ -7,9 +7,9 @@ class loker_db extends basic_db {
   function load_class(){
       parent::load_class();
       $this->tadd("name",new str_type(1,"",512));
-      $this->tadd("company",new str_type(1,"",512));
       $this->tadd("tel",new str_type(1,"",512));
-      $this->tadd("adr",new str_type(1,"",512));
+      $this->tadd("mail",new str_type(1,"",512));
+			$this->tadd("coment",new str_type(1,"",512));
   }    
   
 }
@@ -60,10 +60,9 @@ class loker extends basic_manager {
 
        $res="<html><body><h3>Форма \"Узнать больше о локерах\"</h3><br>";
        $res.="<b>* Имя</b>: " .$f->getf("name")."<br>";
-       $res.="<b>Компания</b>: " .$f->getf("company")."<br>";
        $res.="<b>Телефон</b>: " .$f->getf("tel")."<br>";
        $res.="<b>* E-mail</b>: " .$f->getf("mail")."<br>";
-       $res.="<b>Номер бyклета</b>: " .$f->getf("adr")."<br>";
+       $res.="<b>Комментарий</b>: " .$f->getf("coment")."<br>";
        $res.="<br><hr><br>Orgspace.ru</body></html>";
 
        form_to_db("Форма \"Узнать больше о локерах\"",$res);
