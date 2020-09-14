@@ -180,9 +180,9 @@
 </xsl:template>
 
 <xsl:template match="loker_add" mode="right_start"> 
-<xsl:if test="not($wrapper/container_db/element_db[@layer=3])">
-<xsl:value-of select="$lc/loker/@name"/>
-</xsl:if>
+<!-- <xsl:if test="not($wrapper/container_db/element_db[@layer=3])"> -->
+<!-- <xsl:value-of select="$lc/loker/@name"/> -->
+<!-- </xsl:if> -->
 </xsl:template>
 
 <xsl:template match="loker_add" mode="right_end"> 
