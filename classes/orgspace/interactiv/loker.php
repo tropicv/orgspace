@@ -58,7 +58,7 @@ class loker extends basic_manager {
         return $this->exit_code(EXIT_EXTERNAL_REDIRECT);
        }
 
-       $res="<html><body><h3>Форма \"Узнать больше о локерах\"</h3><br>";
+       $res="<html><body><h3>Узнать больше о локерах</h3><br>";
        $res.="<b>* Имя</b>: " .$f->getf("name")."<br>";
        $res.="<b>Телефон</b>: " .$f->getf("tel")."<br>";
        $res.="<b>* E-mail</b>: " .$f->getf("mail")."<br>";
