@@ -90,6 +90,10 @@
  <alt>To hear more</alt>
 </kmore>
 
+<loker name="To hear more loker form">
+ <alt>To hear more</alt>
+</loker>
+
 <ordcat name="Catalogue order form">
  <alt>New каталог</alt>
  <adr>Deivery address</adr>
