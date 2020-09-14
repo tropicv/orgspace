@@ -77,9 +77,6 @@
 <b><xsl:value-of select="$lc/feedback/err"/></b>
 </xsl:if> 
 
-<br/>
-<p>* <xsl:value-of select="$lc/feedback/req"/></p>
-
  <form name="loker" id="loker" method="POST" action="loker-add?state=1" enctype="multipart/form-data">
 
 <xsl:variable name="c" select="loker_db"/>
@@ -99,6 +96,10 @@
 <td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
 </tr>
 
+
+<tr>
+<td colspan="2">* <xsl:value-of select="$lc/feedback/comp"/></td>
+</tr>
 <tr>
 <td class="input"><input type="text" name="company" size="45" value="{$c/@company}"/></td>
 <td class="inputr"><img src="/images/dot.gif" width="5" height="15" border="0"/><br/></td>
@@ -166,20 +167,23 @@
 
 <tr>
 <td colspan="2">
-
+<!--
+  <input type="image" src="/images/send{$lc/@pref}.gif" width="68" height="14" border="0" align="absmiddle" alt="{$lc/send}" title="{$lc/send}"/>
+  <img src="/images/dot.gif" width="40" height="1" border="0"/>
+  <input onclick="reset_form('loker');return false;" type="image" src="/images/clear{$lc/@pref}.gif" width="68" height="14" border="0" align="absmiddle" alt="{$lc/clear}" title="{$lc/clear}"/>
+-->
 <xsl:call-template name="form_button">
 <xsl:with-param name="name_form">loker</xsl:with-param>
 </xsl:call-template>
 </td>
 </tr>
 
-<tr>
-<td colspan="2">* <xsl:value-of select="$lc/feedback/comp"/></td>
-</tr>
-
 </table>
 
  </form>
+ 
+ <br/>
+<p>* <xsl:value-of select="$lc/feedback/req"/></p>
  
  <xsl:call-template name="politic" />
 
