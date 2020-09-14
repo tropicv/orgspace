@@ -5,6 +5,7 @@
 <xsl:include href="../layout/level4/level4.xsl"/> 
 <xsl:include href="../layout/level4/dbuyl4.xsl"/> 
 <xsl:include href="../layout/level4/dprodl4.xsl"/> 
+<xsl:include href="../layout/level4/goodsl4.xsl"/> 
 
 
 <xsl:template match="loker_add"> 
