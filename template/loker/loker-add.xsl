@@ -81,89 +81,70 @@
 
 <xsl:variable name="c" select="loker_db"/>
 
-<table class="fbuy" border="0" cellspacing="0" cellpadding="0" >
+<table class="feedback" border="0" cellspacing="0" cellpadding="0" >
 
-<tr>
-<td colspan="2">* <xsl:value-of select="$lc/feedback/name"/></td>
-</tr>
-
-<tr>
-<td class="input"><input type="text" name="name" size="45" value="{$c/@name}"/></td>
-<td class="inputr"><img src="/images/dot.gif" width="5" height="15" border="0"/><br/></td>
-</tr>
-
-<tr>
-<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
-</tr>
-
-
-<tr>
-<td colspan="2">* <xsl:value-of select="$lc/feedback/comp"/></td>
-</tr>
-<tr>
-<td class="input"><input type="text" name="company" size="45" value="{$c/@company}"/></td>
-<td class="inputr"><img src="/images/dot.gif" width="5" height="15" border="0"/><br/></td>
-</tr>
-
-
-<tr>
-<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
-</tr>
-
-<tr>
-<td colspan="2">* <xsl:value-of select="$lc/feedback/tel"/></td>
-</tr>
-<tr>
-<td class="input"><input type="text" name="tel" size="45" value="{$c/@tel}"/></td>
-<td class="inputr"><img src="/images/dot.gif" width="5" height="15" border="0"/><br/></td>
-</tr>
-
-<tr>
-<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
-</tr>
-
-<tr>
-<td colspan="2">* E-mail</td>
-</tr>
-<tr>
-<td class="input"><input type="text" name="mail" size="45" value="{$c/@mail}"/></td>
-<td class="inputr"><img src="/images/dot.gif" width="5" height="15" border="0"/><br/></td>
-</tr>
-
-<tr>
-<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
-</tr>
-
-<tr>
-<td colspan="2"><xsl:value-of select="$lc/loker/adr"/></td>
-</tr>
-<tr>
-<td class="input"><input type="text" name="adr" size="45" value="{$c/@adr}"/></td>
-<td class="inputr"><img src="/images/dot.gif" width="5" height="15" border="0"/><br/></td>
-</tr>
-
-
-<tr>
-<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
-</tr>
-
-<tr>
-<td colspan="2">* Введите код с картинки</td>
-</tr>
-<tr>
-<td colspan="2"><img src="./cap.php"/></td>
-</tr>
-<tr>
-<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
-</tr>
-<tr>
-<td class="input"><input type="text" size="45" name="keystring"/></td>
-<td class="inputr"><img src="/images/dot.gif" width="5" height="15" border="0"/><br/></td>
-</tr>
-
-<tr>
-<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
-</tr>
+					<tr>
+						<td colspan="2">* <xsl:value-of select="$lc/feedback/name"/></td>
+					</tr>
+					<tr>
+						<td class="input"><input type="text" name="name" size="45" value="{$c/@name}"/></td>
+						<td class="inputr"><img src="/images/dot.gif" width="5" height="15" border="0"/><br/></td>
+					</tr>
+					<tr>
+						<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
+					</tr>
+					<tr>
+						<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
+					</tr>
+					<tr>
+						<td colspan="2">* <xsl:value-of select="$lc/feedback/tel"/></td>
+					</tr>
+					<tr>
+						<td class="input"><input type="text" name="tel" size="45" value="{$c/@tel}"/></td>
+						<td class="inputr"><img src="/images/dot.gif" width="5" height="15" border="0"/><br/></td>
+					</tr>
+					<tr>
+						<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
+					</tr>
+					<tr>
+						<td colspan="2">* E-mail</td>
+					</tr>
+					<tr>
+						<td class="input"><input type="text" name="mail" size="45" value="{$c/@mail}"/></td>
+						<td class="inputr"><img src="/images/dot.gif" width="5" height="15" border="0"/><br/></td>
+					</tr>
+					<tr>
+						<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
+					</tr>
+					<tr>
+						<td colspan="2">* Комментарий</td>
+					</tr>
+					<tr>
+						<td class="input"><textarea type="text" name="coment" size="45" value="{$c/@coment}"/></td>
+						<td class="inputr"><img src="/images/dot.gif" width="5" height="15" border="0"/><br/></td>
+					</tr>
+					<tr>
+						<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
+					</tr>
+					<tr>
+						<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
+					</tr>
+					<tr>
+						<td colspan="2">* Введите код с картинки</td>
+					</tr>
+					<tr>
+						<td colspan="2"><img src="./cap.php"/></td>
+					</tr>
+					<tr>
+						<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
+					</tr>
+					<tr>
+						<td class="input"><input type="text" size="45" name="keystring"/></td>
+						<td class="inputr"><img src="/images/dot.gif" width="5" height="15" border="0"/><br/></td>
+					</tr>
+					<tr>
+						<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
+					</tr>
 
 <tr>
 <td colspan="2">
