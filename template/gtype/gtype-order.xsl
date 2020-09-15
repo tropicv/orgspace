@@ -5,9 +5,11 @@
 <xsl:include href="../layout/level4/level4.xsl"/> 
 <xsl:include href="../layout/level4/goodsl4.xsl"/> 
 <xsl:include href="../gtype/gtypeblock.xsl"/>
+<xsl:include href="../predmet/predmetblock.xsl"/>
 
 
 <xsl:template match="gtype_order"> 
+
 <xsl:choose>
  <xsl:when test="$wrapper/container_db">
    <xsl:apply-templates select="$wrapper"/>
@@ -22,12 +24,14 @@
 
 
 <xsl:if test="$admin=1">
+[<a href="gtype-edit?obj={gtype_db/@id}">Редактировать тип</a>]
+[<a href="gtype-add">Добавить тип</a>]
 <xsl:choose>
 <xsl:when test="predmet_db/child::*">
-[<a href="container-managewrapper?i=gtype&amp;m=order&amp;obj={gtype_db/@id}&amp;predmet={predmet_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
+[<a href="container-managewrapper?i=gtype&amp;m=view&amp;obj={gtype_db/@id}&amp;predmet={predmet_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
 </xsl:when>
 <xsl:otherwise>
-[<a href="container-managewrapper?i=gtype&amp;m=order&amp;obj={gtype_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
+[<a href="container-managewrapper?i=gtype&amp;m=view&amp;obj={gtype_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
 </xsl:otherwise>
 </xsl:choose>
 </xsl:if>
@@ -40,61 +44,70 @@
  <xsl:with-param name="type" select="string('cont')"/>
 </xsl:call-template>
 </xsl:if>
-</xsl:template>
 
+</xsl:template>
 
 <xsl:template match="gtype_order" mode="title"> 
-	<a class="white" href="gtype-view?walias={gtype_db/@walias}"><xsl:value-of select="gtypeorder_db/@title"/></a>
+<a class="white" href="predmet-view?walias={predmet_db/@walias}"><xsl:value-of select="predmet_db/@short_name"/></a>
 </xsl:template>
-
 
 <xsl:template match="gtype_order" mode="path"> 
-	<xsl:variable name="gtype" select="gtype_db"/>
 
-	<div class="path">
-		<xsl:call-template name="gtypepath"/>
-		<a href="gtype-view?walias={$gtype/@walias}"><xsl:value-of select="$gtype/@name"/></a> : Узнать больше
-		<!--<a href="gtype-examle?walias={$gtype/@walias}&amp;obj={gtypeitem_db/@obj}"><xsl:value-of select="gtypeitem_db/@name"/></a> : Заказать кресло-->
-	</div>
+<xsl:variable name="gtype" select="gtype_db"/>
+<xsl:variable name="predmet" select="predmet_db"/>
+
+<div class="path">
+<xsl:call-template name="gtypepath"/>
+<a href="predmet-all"><xsl:value-of select="$lc/predmet/@name"/></a> : 
+<xsl:if test="predmet_db/child::*">
+<a href="predmet-view?walias={$predmet/@walias}"><xsl:value-of select="$predmet/@short_name"/></a> : 
+</xsl:if>
+<xsl:value-of select="$gtype/@name"/>
+</div>
+
 </xsl:template>
-
 
 <xsl:template match="gtype_order" mode="left_start"> 
+   <xsl:call-template name="res_image_stuff">
+          <xsl:with-param name="id" select="concat('gtype_',concat(gtype_db/@id,'_1'))"/>
+          <xsl:with-param name="type" select="gtype_db/foto"/>
+          <xsl:with-param name="max" select='string("204")'/>
+          <xsl:with-param name="alt" select='gtype_db/@name'/>
+   </xsl:call-template>
 </xsl:template>
-
 
 <xsl:template match="gtype_order" mode="left_end"> 
 </xsl:template>
 
-
 <xsl:template match="gtype_order" mode="content_title"> 
- <xsl:value-of select="gtypeorder_db/@title"/>
+<!--predmet_db-->
+ <xsl:value-of disable-output-escaping="yes" select="gtype_db/@name"/>
 </xsl:template>
-
 
 <xsl:template match="gtype_order" mode="content_start"> 
+<!-- <h2><xsl:value-of select="gtype_db/@name"/>: дополнительная информация</h2>
+ <xsl:value-of select="gtype_db/@description" disable-output-escaping="yes"/>-->
 </xsl:template>
 
+<xsl:template match="gtype_order" mode="content_end">
+<xsl:if test="not($wrapper/container_db/element_db[@layer=2])">
+<h1><xsl:value-of select="$lc/loker/@name"/></h1>
+</xsl:if>
 
-<!-- TEST CHAIRS -->
-<xsl:template match="gtype_order" mode="content_end"> 
-	<xsl:if test="not($wrapper/container_db/element_db[@layer=2])">
-		<h1><xsl:value-of select="gtypeorder_db/@title"/></h1>
-	</xsl:if>
+<xsl:choose>
 
-	<xsl:choose>
-		<xsl:when test="@last_state=0 or @last_state=1"> 
-			<xsl:if test="error"> 
-				<b><xsl:value-of select="$lc/feedback/err"/></b>
-			</xsl:if> 
-			<br/>
-			<p>* <xsl:value-of select="$lc/feedback/req"/></p>
-			<form name="ordcat" id="ordcat" method="POST" action="gtype-order?state=1" enctype="multipart/form-data">
-				<xsl:variable name="c" select="gtypeorder_db"/>
-				<table class="feedback" border="0" cellspacing="0" cellpadding="0" >
-					<tr>
-						<td colspan="2"><input type="hidden" name="walias" size="45" value="{gtypeitem_db/@name}"/></td>
-					</tr>
+<xsl:when test="@last_state=0 or @last_state=1"> 
+
+<xsl:if test="error"> 
+<b><xsl:value-of select="$lc/feedback/err"/></b>
+</xsl:if> 
+
+ <form name="loker" id="loker" method="POST" action="loker-add?state=1" enctype="multipart/form-data">
+
+<xsl:variable name="c" select="loker_db"/>
+
+<table class="feedback" border="0" cellspacing="0" cellpadding="0" >
+
 					<tr>
 						<td colspan="2">* <xsl:value-of select="$lc/feedback/name"/></td>
 					</tr>
@@ -157,64 +170,190 @@
 					<tr>
 						<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
 					</tr>
-					<tr>
-						<td colspan="2">
-							<xsl:call-template name="form_button">
-								<xsl:with-param name="name_form">gtype</xsl:with-param>
-							</xsl:call-template>
-						</td>
-					</tr>
-				</table>
-			</form>
-			<xsl:call-template name="politic" />
-		</xsl:when> 
-		<xsl:when test="@last_state=2"> 
-			<xsl:value-of select="$lc/feedback/thanks"/>
-		</xsl:when> 
-	</xsl:choose>
-</xsl:template>
 
+<tr>
+<td colspan="2">
+<!--
+  <input type="image" src="/images/send{$lc/@pref}.gif" width="68" height="14" border="0" align="absmiddle" alt="{$lc/send}" title="{$lc/send}"/>
+  <img src="/images/dot.gif" width="40" height="1" border="0"/>
+  <input onclick="reset_form('loker');return false;" type="image" src="/images/clear{$lc/@pref}.gif" width="68" height="14" border="0" align="absmiddle" alt="{$lc/clear}" title="{$lc/clear}"/>
+-->
+<xsl:call-template name="form_button">
+<xsl:with-param name="name_form">loker</xsl:with-param>
+</xsl:call-template>
+</td>
+</tr>
+
+</table>
+
+ </form>
+ 
+ <br/>
+<p>* <xsl:value-of select="$lc/feedback/req"/></p>
+ 
+ <xsl:call-template name="politic" />
+
+</xsl:when> 
+
+<xsl:when test="@last_state=2"> 
+<xsl:value-of select="$lc/feedback/thanks"/>
+</xsl:when> 
+
+</xsl:choose>
+
+</xsl:template>
 
 <xsl:template match="gtype_order" mode="right_start"> 
-	<xsl:variable name="gtype" select="gtype_db"/>
-	<xsl:variable name="gtypeitem" select="gtypeitem_db"/>
 
-	<xsl:for-each select="list_all_goods/list_one[@block!=1]">
-		<tr>
-		<td><img src="/images/dot.gif" width="1" height="1" border="0" name="dot14" id="dot14"/><br/></td>
-		<td class="wtext">
-			<div class="rmenu" name="orgmenu14head" id="orgmenu14head">
-				<xsl:choose>
-					<xsl:when test="$gtypeitem/@id=@id"><xsl:value-of select="@name"/></xsl:when>
-					<xsl:otherwise><a href="gtype-example?walias={$gtype/@walias}&amp;obj={@id}"><xsl:value-of select="@name"/></a></xsl:otherwise>
-				</xsl:choose>
-			</div>
-		</td>
-		</tr>
-	</xsl:for-each>
-	<tr>
-		<td colspan="2"><img src="/images/dot.gif" width="1" height="4" border="0"/><br/></td>
-	</tr>
-	<tr>
-		<td><img src="/images/dot.gif" width="1" height="1" border="0" /><br/></td>
-		<td class="wtext"><div name="orgmenu11head" id="orgmenu11head"><a onMouseOut="Turn('11',0);" onMouseOver="Turn('11',1);" href="container-view?walias=gtype"><xsl:value-of select="$lc/gtype/other"/></a></div></td>
-	</tr>
-	<tr>
-		<td colspan="2"><img src="/images/dot.gif" width="1" height="4" border="0" name="dot11" id="dot11" hspace="10"/><br/></td>
-	</tr>
+
+<xsl:choose>
+<xsl:when test="predmet_db/child::*">
+<xsl:variable name="predmet" select="predmet_db"/>
+ <xsl:for-each select="list_all_gtype/list_one">
+
+<xsl:choose>
+<xsl:when test="@id=../../gtype_db/@id">
+ <!--div class="current"><xsl:value-of select="@name"/></div-->
+ <tr>
+  <td><img src="/images/dot.gif" width="1" height="1" border="0" /><br/></td>
+  <td class="wtext">
+   <div class="rmenu">
+    <xsl:value-of select="@name"/>
+   </div>
+  </td>
+ </tr>
+</xsl:when>
+<xsl:otherwise>
+ <!--div><a href="gtype-view?obj={@id}&amp;predmet={$predmet/@id}"><xsl:value-of select="@name"/></a></div-->
+ <tr>
+  <td><img src="/images/dot.gif" width="1" height="1" border="0" /><br/></td>
+  <td class="wtext">
+   <div class="rmenu">
+    <a href="gtype-view?obj={@id}&amp;predmet={$predmet/@id}"><xsl:value-of select="@name"/></a>
+   </div>
+  </td>
+ </tr>
+</xsl:otherwise>
+</xsl:choose>
+
+ </xsl:for-each>
+</xsl:when>
+<xsl:otherwise>
+ <xsl:for-each select="list_all_gtype/list_one">
+
+<xsl:choose>
+<xsl:when test="@id=../../gtype_db/@id">
+ <!--div class="current"><xsl:value-of select="@name"/></div-->
+ <tr>
+  <td><img src="/images/dot.gif" width="1" height="1" border="0" /><br/></td>
+  <td class="wtext">
+   <div class="rmenu">
+    <xsl:value-of select="@name"/>
+   </div>
+  </td>
+ </tr>
+</xsl:when>
+<xsl:otherwise>
+ <!--div><a href="gtype-view?obj={@id}"><xsl:value-of select="@name"/></a></div-->
+  <tr>
+  <td><img src="/images/dot.gif" width="1" height="1" border="0" /><br/></td>
+  <td class="wtext">
+   <div class="rmenu">
+    <a href="gtype-view?obj={@id}"><xsl:value-of select="@name"/></a>
+   </div>
+  </td>
+ </tr>
+</xsl:otherwise>
+</xsl:choose>
+
+ </xsl:for-each>
+</xsl:otherwise>
+</xsl:choose>
+
+
+
+
+<xsl:if test="predmet_db/@sh_fotogal=1">
+<tr>
+<td><img src="/images/dot.gif" width="1" height="1" border="0" /><br/></td>
+<td class="wtext"><div class="rmenu"><a href="predmet-gallery?walias={predmet_db/@walias}"><xsl:value-of select="$lc/predmet/gallery"/></a></div></td>
+</tr>
+</xsl:if>
+
+<xsl:if test="predmet_db/@sh_assort=1">
+<tr>
+<td><img src="/images/dot.gif" width="1" height="1" border="0" /><br/></td>
+<td class="wtext"><div class="rmenu"><a href="predmet-assortment?walias={predmet_db/@walias}"><xsl:value-of select="$lc/predmet/assortment"/></a></div></td>
+</tr>
+</xsl:if>
+
+<tr>
+<td colspan="2"><img src="/images/dot.gif" width="1" height="4" border="0"/><br/></td>
+</tr>
+
+<tr>
+ <td><img src="/images/dot.gif" width="1" height="1" border="0" /><br/></td>
+ <td class="wtext">
+  <div name="orgmenu11head" id="orgmenu11head">
+   <a onMouseOut="Turn('11',0);" onMouseOver="Turn('11',1);" href="predmet-all">
+    <xsl:value-of select="$lc/predmet/other"/>
+   </a>
+  </div>
+ </td>
+</tr>
+<tr>
+<td colspan="2"><img src="/images/dot.gif" width="1" height="4" border="0" name="dot11" id="dot11" hspace="10"/><br/></td>
+</tr>
+
+
 </xsl:template>
 
-
-<xsl:template match="gtype_order" mode="right_end">
+<xsl:template match="gtype_order" mode="right_end"> 
 </xsl:template>
-
 
 <xsl:template match="gtype_order" mode="under_start"> 
-</xsl:template>
 
+<!--
+<xsl:choose>
+<xsl:when test="predmet_db/child::*">
+<xsl:variable name="predmet" select="predmet_db"/>
+ <xsl:for-each select="list_all_gtype/list_one">
+
+<xsl:choose>
+<xsl:when test="@id=../../gtype_db/@id">
+ <div class="current"><xsl:value-of select="@name"/></div>
+</xsl:when>
+<xsl:otherwise>
+ <div><a href="gtype-view?obj={@id}&amp;predmet={$predmet/@id}"><xsl:value-of select="@name"/></a></div>
+</xsl:otherwise>
+</xsl:choose>
+
+ </xsl:for-each>
+</xsl:when>
+<xsl:otherwise>
+ <xsl:for-each select="list_all_gtype/list_one">
+
+<xsl:choose>
+<xsl:when test="@id=../../gtype_db/@id">
+ <div class="current"><xsl:value-of select="@name"/></div>
+</xsl:when>
+<xsl:otherwise>
+ <div><a href="gtype-view?obj={@id}"><xsl:value-of select="@name"/></a></div>
+</xsl:otherwise>
+</xsl:choose>
+
+ </xsl:for-each>
+</xsl:otherwise>
+</xsl:choose>
+-->
+
+
+</xsl:template>
 
 <xsl:template match="gtype_order" mode="under_end"> 
 </xsl:template>
 
+
 </xsl:stylesheet>
+
 
