@@ -75,6 +75,7 @@ class gtype extends basic_manager {
       $this->tadd("del");        
       $this->tadd("edit");  
       $this->tadd("view",PUBLICT);  
+			$this->tadd("order",PUBLICT);
   }
 
   /** static function, return specifed obj_id from obj or walias */
