@@ -10,29 +10,27 @@
 
 <xsl:template match="loker_add"> 
 
-<xsl:choose>
- <xsl:when test="$wrapper/container_db">
-   <xsl:apply-templates select="$wrapper"/>
- </xsl:when>
- <xsl:otherwise>
-   <xsl:call-template name="dbuyl4">
-     <xsl:with-param name="page" select="container_db"/>
-     <xsl:with-param name="class" select="string('buy')"/>
-   </xsl:call-template>
- </xsl:otherwise>
-</xsl:choose>
+	<xsl:choose>
+		<xsl:when test="$wrapper/container_db">
+			<xsl:apply-templates select="$wrapper"/>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:call-template name="goodsl4">
+				<xsl:with-param name="page" select="container_db"/>
+				<xsl:with-param name="class" select="string('prod')"/>
+			</xsl:call-template>
+		</xsl:otherwise>
+	</xsl:choose>
 
+	<xsl:call-template name="chairsmenu">
+		<xsl:with-param name="chairs" select="chairs_db/@walias"/>
+		<xsl:with-param name="list" select="list_all"/>
+		<xsl:with-param name="type" select="string('cont')"/>
+	</xsl:call-template>
 
-<xsl:if test="$admin=1">
-<xsl:choose>
-<xsl:when test="@last_state=1 or @last_state=2"> 
-[<a href="container-managewrapper?i=loker&amp;m=add&amp;state={@last_state}&amp;creator=container.view.dbuyl4" target="blank">Редактировать шаблон</a>]
-</xsl:when>
-<xsl:otherwise>
-[<a href="container-managewrapper?i=loker&amp;m=add&amp;creator=container.view.dbuyl4" target="blank">Редактировать шаблон</a>]
-</xsl:otherwise>
-</xsl:choose>
-</xsl:if>
+	<xsl:if test="$admin=1">
+		[<a href="container-managewrapper?i=chairs&amp;m=order&amp;state={@last_state}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
+	</xsl:if>
 
 
 </xsl:template>
