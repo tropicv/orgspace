@@ -142,7 +142,7 @@ class gtype extends basic_manager {
     switch ($state){
 
       case INIT_STATE:
-				// d_put($f);
+				d_put($f);
 				// $g=new gtype_db();
 
 				// if(get_param("predmet")!=null){
