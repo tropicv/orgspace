@@ -2,7 +2,7 @@
 
 /** type of goods */
 
-class loker_db extends basic_db {
+class gtypeorder_db extends basic_db {
   function load_class(){
       parent::load_class();
       $this->tadd("name",new str_type(1,"",512));
@@ -135,7 +135,7 @@ class gtype extends basic_manager {
 	
 	
 	function order($state) {
-    $f=new loker_db();
+    $f=new gtypeorder_db();
     $f->create_default();
     // $f->set_expand_dictonary(true);
 
