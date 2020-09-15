@@ -142,6 +142,7 @@ class gtype extends basic_manager {
     switch ($state){
 
       case INIT_STATE:
+				$errs=$f->make_obj($this->env->get_post_data());
 				d_put($f);
 				// $g=new gtype_db();
 
