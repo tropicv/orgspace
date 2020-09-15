@@ -8,27 +8,40 @@
 
 
 <xsl:template match="gtype_order"> 
-	<xsl:choose>
-		<xsl:when test="$wrapper/container_db">
-			<xsl:apply-templates select="$wrapper"/>
-		</xsl:when>
-		<xsl:otherwise>
-			<xsl:call-template name="goodsl4">
-				<xsl:with-param name="page" select="container_db"/>
-				<xsl:with-param name="class" select="string('prod')"/>
-			</xsl:call-template>
-		</xsl:otherwise>
-	</xsl:choose>
+<xsl:choose>
+ <xsl:when test="$wrapper/container_db">
+   <xsl:apply-templates select="$wrapper"/>
+ </xsl:when>
+ <xsl:otherwise>
+   <xsl:call-template name="goodsl4">
+     <xsl:with-param name="page" select="container_db"/>
+     <xsl:with-param name="class" select="string('prod')"/>
+   </xsl:call-template>
+ </xsl:otherwise>
+</xsl:choose>
 
-	<xsl:call-template name="gtypemenu">
-		<xsl:with-param name="gtype" select="gtype_db/@walias"/>
-		<xsl:with-param name="list" select="list_all"/>
-		<xsl:with-param name="type" select="string('cont')"/>
-	</xsl:call-template>
 
-	<xsl:if test="$admin=1">
-		[<a href="container-managewrapper?i=gtype&amp;m=order&amp;state={@last_state}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
-	</xsl:if>
+<xsl:if test="$admin=1">
+[<a href="gtype-edit?obj={gtype_db/@id}">Редактировать тип</a>]
+[<a href="gtype-add">Добавить тип</a>]
+<xsl:choose>
+<xsl:when test="predmet_db/child::*">
+[<a href="container-managewrapper?i=gtype&amp;m=view&amp;obj={gtype_db/@id}&amp;predmet={predmet_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
+</xsl:when>
+<xsl:otherwise>
+[<a href="container-managewrapper?i=gtype&amp;m=view&amp;obj={gtype_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
+</xsl:otherwise>
+</xsl:choose>
+</xsl:if>
+
+
+<xsl:if test="$print!=1">
+<xsl:call-template name="predmetmenu">
+ <xsl:with-param name="predmet" select="predmet_db/@walias"/>
+ <xsl:with-param name="list" select="list_all_predmet"/>
+ <xsl:with-param name="type" select="string('cont')"/>
+</xsl:call-template>
+</xsl:if>
 </xsl:template>
 
 
@@ -118,7 +131,7 @@
 						<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
 					</tr>
 					<tr>
-						<td colspan="2">* Комментарий</td>
+						<td colspan="2">Комментарий</td>
 					</tr>
 					<tr>
 						<td class="input"><textarea type="text" name="coment" size="45" value="{$c/@coment}"/></td>
