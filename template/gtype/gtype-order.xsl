@@ -26,10 +26,10 @@
 <xsl:if test="$admin=1">
 <xsl:choose>
 <xsl:when test="predmet_db/child::*">
-[<a href="container-managewrapper?i=gtype&amp;m=order&amp;obj={gtype_db/@id}&amp;predmet={predmet_db/@id}&amp;creator=container.view.goodsl4" target="blank">Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ С€Р°Р±Р»РѕРЅ</a>]
+[<a href="container-managewrapper?i=gtype&amp;m=order&amp;obj={gtype_db/@id}&amp;predmet={predmet_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
 </xsl:when>
 <xsl:otherwise>
-[<a href="container-managewrapper?i=gtype&amp;m=order&amp;obj={gtype_db/@id}&amp;creator=container.view.goodsl4" target="blank">Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ С€Р°Р±Р»РѕРЅ</a>]
+[<a href="container-managewrapper?i=gtype&amp;m=order&amp;obj={gtype_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
 </xsl:otherwise>
 </xsl:choose>
 </xsl:if>
@@ -134,7 +134,7 @@
 						<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
 					</tr>
 					<tr>
-						<td colspan="2">РљРѕРјРјРµРЅС‚Р°СЂРёР№</td>
+						<td colspan="2">Комментарий</td>
 					</tr>
 					<tr>
 						<td class="input"><textarea type="text" name="coment" size="45" value="{$c/@coment}"/></td>
@@ -147,7 +147,7 @@
 						<td colspan="2"><img src="/images/dot.gif" width="1" height="10" border="0"/></td>
 					</tr>
 					<tr>
-						<td colspan="2">* Р’РІРµРґРёС‚Рµ РєРѕРґ СЃ РєР°СЂС‚РёРЅРєРё</td>
+						<td colspan="2">* Введите код с картинки</td>
 					</tr>
 					<tr>
 						<td colspan="2"><img src="./cap.php"/></td>
