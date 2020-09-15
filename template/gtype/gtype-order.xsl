@@ -22,14 +22,12 @@
 
 
 <xsl:if test="$admin=1">
-[<a href="gtype-edit?obj={gtype_db/@id}">Редактировать тип</a>]
-[<a href="gtype-add">Добавить тип</a>]
 <xsl:choose>
 <xsl:when test="predmet_db/child::*">
-[<a href="container-managewrapper?i=gtype&amp;m=view&amp;obj={gtype_db/@id}&amp;predmet={predmet_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
+[<a href="container-managewrapper?i=gtype&amp;m=order&amp;obj={gtype_db/@id}&amp;predmet={predmet_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
 </xsl:when>
 <xsl:otherwise>
-[<a href="container-managewrapper?i=gtype&amp;m=view&amp;obj={gtype_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
+[<a href="container-managewrapper?i=gtype&amp;m=order&amp;obj={gtype_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
 </xsl:otherwise>
 </xsl:choose>
 </xsl:if>

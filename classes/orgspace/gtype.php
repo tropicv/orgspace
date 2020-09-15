@@ -141,40 +141,38 @@ class gtype extends basic_manager {
     switch ($state){
 
       case INIT_STATE:
-				$gd=new goods($this);
-     $gd->list_all_predmet();
+				d_put($f);
+				$g=new gtype_db();
 
-     $g=new gtype_db();
+				if(get_param("predmet")!=null){
+					$s=new predmet_db();
+					$s->get_obj(get_param("predmet"));
+					d_put($s);
 
-     if(get_param("predmet")!=null){
-      $s=new predmet_db();
-      $s->get_obj(get_param("predmet"));
-      d_put($s);
+					$g->list_by_predmet($s->getf("id"));	  
+					d_open_node("list_all_gtype","");
+					while($g->lst()){
+						if($g->is_public()){
+						 $tmp["name"]=$g->getf("name");
+						 $tmp["id"]=$g->getf("id");
+						 d_put_node("list_one",$tmp);
+						}
+					}
+					d_close();  
 
-      $g->list_by_predmet($s->getf("id"));	  
-      d_open_node("list_all_gtype","");
-      while($g->lst()){
-        if($g->is_public()){
-         $tmp["name"]=$g->getf("name");
-         $tmp["id"]=$g->getf("id");
-         d_put_node("list_one",$tmp);
-        }
-      }
-      d_close();  
+			 }
 
-     }
-
-     $g->get_obj(get_obj());
-     d_put($g);
+			 $g->get_obj(get_obj());
+			 d_put($g);
 
 
-     if(get_param("predmet")!=null){
-     set_title("ןנוהלועû - ".$s->getf("short_name")." - ".$g->getf("name"));	
-     } else{
-     set_title("ןנוהלועû - ".$g->getf("name"));	
-     }
+			 if(get_param("predmet")!=null){
+				set_title("ןנוהלועû - ".$s->getf("short_name")." - ".$g->getf("name"));	
+			 } else{
+				set_title("ןנוהלועû - ".$g->getf("name"));	
+			 }
 
-				return $this->exit_code(EXIT_OK);
+			return $this->exit_code(EXIT_OK);
 
       case SAVE_STATE:
 
