@@ -256,7 +256,7 @@
 	<tr>
 		<td><img src="/images/dot.gif" width="1" height="1" border="0"/><br/></td>
 		<td class="wtext">
-			<div style="margin: 5px 0;"><a href="loker-add?predmet={../@predmet}&amp;obj={../@obj}" style="padding: 5px 0;">Узнать больше</a></div>
+			<div style="margin: 5px 0;"><a href="loker-add" style="padding: 5px 0;">Узнать больше</a></div>
 		</td>
 	</tr>
 	<tr>
