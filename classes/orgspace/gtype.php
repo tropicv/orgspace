@@ -137,7 +137,7 @@ class gtype extends basic_manager {
 	function order($state) {
     $f=new loker_db();
     $f->create_default();
-    $f->set_expand_dictonary(true);
+    // $f->set_expand_dictonary(true);
 
     switch ($state){
 
