@@ -24,14 +24,12 @@
 
 
 <xsl:if test="$admin=1">
-[<a href="gtype-edit?obj={gtype_db/@id}">Редактировать тип</a>]
-[<a href="gtype-add">Добавить тип</a>]
 <xsl:choose>
 <xsl:when test="predmet_db/child::*">
-[<a href="container-managewrapper?i=gtype&amp;m=view&amp;obj={gtype_db/@id}&amp;predmet={predmet_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
+[<a href="container-managewrapper?i=gtype&amp;m=order&amp;obj={gtype_db/@id}&amp;predmet={predmet_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
 </xsl:when>
 <xsl:otherwise>
-[<a href="container-managewrapper?i=gtype&amp;m=view&amp;obj={gtype_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
+[<a href="container-managewrapper?i=gtype&amp;m=order&amp;obj={gtype_db/@id}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
 </xsl:otherwise>
 </xsl:choose>
 </xsl:if>
@@ -68,12 +66,6 @@
 </xsl:template>
 
 <xsl:template match="gtype_order" mode="left_start"> 
-   <xsl:call-template name="res_image_stuff">
-          <xsl:with-param name="id" select="concat('gtype_',concat(gtype_db/@id,'_1'))"/>
-          <xsl:with-param name="type" select="gtype_db/foto"/>
-          <xsl:with-param name="max" select='string("204")'/>
-          <xsl:with-param name="alt" select='gtype_db/@name'/>
-   </xsl:call-template>
 </xsl:template>
 
 <xsl:template match="gtype_order" mode="left_end"> 
@@ -102,9 +94,9 @@
 <b><xsl:value-of select="$lc/feedback/err"/></b>
 </xsl:if> 
 
- <form name="loker" id="loker" method="POST" action="loker-add?state=1" enctype="multipart/form-data">
+ <form name="loker" id="loker" method="POST" action="gtype-order?state=1" enctype="multipart/form-data">
 
-<xsl:variable name="c" select="loker_db"/>
+<xsl:variable name="c" select="gtypeorder_db"/>
 
 <table class="feedback" border="0" cellspacing="0" cellpadding="0" >
 
@@ -224,12 +216,12 @@
  </tr>
 </xsl:when>
 <xsl:otherwise>
- <!--div><a href="gtype-view?obj={@id}&amp;predmet={$predmet/@id}"><xsl:value-of select="@name"/></a></div-->
+ <!--div><a href="gtype-order?obj={@id}&amp;predmet={$predmet/@id}"><xsl:value-of select="@name"/></a></div-->
  <tr>
   <td><img src="/images/dot.gif" width="1" height="1" border="0" /><br/></td>
   <td class="wtext">
    <div class="rmenu">
-    <a href="gtype-view?obj={@id}&amp;predmet={$predmet/@id}"><xsl:value-of select="@name"/></a>
+    <a href="gtype-order?obj={@id}&amp;predmet={$predmet/@id}"><xsl:value-of select="@name"/></a>
    </div>
   </td>
  </tr>
@@ -254,12 +246,12 @@
  </tr>
 </xsl:when>
 <xsl:otherwise>
- <!--div><a href="gtype-view?obj={@id}"><xsl:value-of select="@name"/></a></div-->
+ <!--div><a href="gtype-order?obj={@id}"><xsl:value-of select="@name"/></a></div-->
   <tr>
   <td><img src="/images/dot.gif" width="1" height="1" border="0" /><br/></td>
   <td class="wtext">
    <div class="rmenu">
-    <a href="gtype-view?obj={@id}"><xsl:value-of select="@name"/></a>
+    <a href="gtype-order?obj={@id}"><xsl:value-of select="@name"/></a>
    </div>
   </td>
  </tr>
@@ -324,7 +316,7 @@
  <div class="current"><xsl:value-of select="@name"/></div>
 </xsl:when>
 <xsl:otherwise>
- <div><a href="gtype-view?obj={@id}&amp;predmet={$predmet/@id}"><xsl:value-of select="@name"/></a></div>
+ <div><a href="gtype-order?obj={@id}&amp;predmet={$predmet/@id}"><xsl:value-of select="@name"/></a></div>
 </xsl:otherwise>
 </xsl:choose>
 
@@ -338,7 +330,7 @@
  <div class="current"><xsl:value-of select="@name"/></div>
 </xsl:when>
 <xsl:otherwise>
- <div><a href="gtype-view?obj={@id}"><xsl:value-of select="@name"/></a></div>
+ <div><a href="gtype-order?obj={@id}"><xsl:value-of select="@name"/></a></div>
 </xsl:otherwise>
 </xsl:choose>
 
