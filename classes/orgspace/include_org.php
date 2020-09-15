@@ -22,7 +22,6 @@ include_once("classes/orgspace/interactiv/callback.php");
 include_once("classes/orgspace/interactiv/subscr.php");
 include_once("classes/orgspace/interactiv/kmore.php");
 include_once("classes/orgspace/interactiv/ordcat.php");
-include_once("classes/orgspace/interactiv/loker.php");
 include_once("classes/orgspace/interactiv/ordgiro.php");
 include_once("classes/orgspace/interactiv/ordcase.php");
 include_once("classes/orgspace/interactiv/ordtest.php");
