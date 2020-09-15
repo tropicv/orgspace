@@ -15,7 +15,7 @@
    <xsl:apply-templates select="$wrapper"/>
  </xsl:when>
  <xsl:otherwise>
-   <xsl:call-template name="goodsl4">
+   <xsl:call-template name="dbuyl4">
      <xsl:with-param name="page" select="container_db"/>
      <xsl:with-param name="class" select="string('buy')"/>
    </xsl:call-template>
@@ -26,10 +26,10 @@
 <xsl:if test="$admin=1">
 <xsl:choose>
 <xsl:when test="@last_state=1 or @last_state=2"> 
-[<a href="container-managewrapper?i=loker&amp;m=add&amp;state={@last_state}&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
+[<a href="container-managewrapper?i=loker&amp;m=add&amp;state={@last_state}&amp;creator=container.view.dbuyl4" target="blank">Редактировать шаблон</a>]
 </xsl:when>
 <xsl:otherwise>
-[<a href="container-managewrapper?i=loker&amp;m=add&amp;creator=container.view.goodsl4" target="blank">Редактировать шаблон</a>]
+[<a href="container-managewrapper?i=loker&amp;m=add&amp;creator=container.view.dbuyl4" target="blank">Редактировать шаблон</a>]
 </xsl:otherwise>
 </xsl:choose>
 </xsl:if>
