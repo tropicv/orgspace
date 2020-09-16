@@ -58,9 +58,9 @@
 <xsl:call-template name="gtypepath"/>
 <a href="predmet-all"><xsl:value-of select="$lc/predmet/@name"/></a> : 
 <xsl:if test="predmet_db/child::*">
-<a href="predmet-view?walias={$predmet/@walias}"><xsl:value-of select="$predmet/@short_name"/></a> : Узнать больше
+<a href="predmet-view?walias={$predmet/@walias}"><xsl:value-of select="$predmet/@short_name"/></a> : 
 </xsl:if>
-<xsl:value-of select="$gtype/@name"/>
+<a href="gtype-view?predmet={../@predmet}&amp;obj={../@obj}" <xsl:value-of select="$gtype/@name"/></a> : Узнать больше
 </div>
 
 </xsl:template>
