@@ -169,7 +169,7 @@ class gtype extends basic_manager {
 
 
 			 if(get_param("predmet")!=null){
-				set_title("предметы - ".$s->getf("short_name")." - ".$g->getf("name")."Узнать больше");	
+				set_title("предметы - ".$s->getf("short_name")." - ".$g->getf("name")." - Узнать больше");	
 			 } else{
 				set_title("предметы - ".$g->getf("name"));	
 			 }
