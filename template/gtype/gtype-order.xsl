@@ -60,7 +60,7 @@
 <xsl:if test="predmet_db/child::*">
 <a href="predmet-view?walias={$predmet/@walias}"><xsl:value-of select="$predmet/@short_name"/></a> : 
 </xsl:if>
-<a href="gtype-view?predmet={../@predmet}&amp;obj={../@obj}" <xsl:value-of select="$gtype/@name"/></a> : Узнать больше
+<a href="gtype-view?predmet={../@predmet}&amp;obj={../@obj}"><xsl:value-of select="$gtype/@name"/></a> : Узнать больше
 </div>
 
 </xsl:template>
